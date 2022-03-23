@@ -34,12 +34,10 @@ async function main() {
   await exec("yarn build");
   console.log("✅ build complete!");
   console.log("🔦 running lighthouse...");
-  const server = child_process.exec(`yarn start --port ${port}`, async () => {
-    await runLighthouse();
-    const killed = server.kill("SIGINT");
-    console.log("killed", killed);
-  });
-  // await Promise.all([exec(`yarn start --port ${port}`), runLighthouse()]);
+  const server = child_process.exec(`yarn start --port ${port}`);
+  await runLighthouse();
+  server.kill("SIGKILL");
+  process.exit();
 }
 
 main();
