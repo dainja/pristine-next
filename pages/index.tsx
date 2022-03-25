@@ -11,9 +11,11 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 
-import waxIcon from "../assets/icons/wax.png";
+import manicure from "../assets/icons/manicure.png";
+import barber from "../assets/icons/barber.png";
+import hair from "../assets/icons/hair.png";
 import { ChevronRightIcon, ExternalLinkIcon } from "@heroicons/react/solid";
-import plogo from "../assets/p-logo.png";
+import plogo from "../assets/plogo-svg.svg";
 import Image from "next/image";
 
 const features = [
@@ -57,13 +59,13 @@ const features = [
 const blogPosts = [
   {
     id: 1,
-    title: "Boost your conversion rate",
+    title: "Theresa P. Meza",
     href: "#",
     date: "Mar 16, 2020",
     datetime: "2020-03-16",
-    category: { name: "Article", href: "#" },
+    category: { name: "Beauty", href: "#" },
     imageUrl:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
     preview:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
     author: {
@@ -76,13 +78,13 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: "How to use search engine optimization to drive sales",
+    title: "Cheryl G. Yates",
     href: "#",
     date: "Mar 10, 2020",
     datetime: "2020-03-10",
-    category: { name: "Video", href: "#" },
+    category: { name: "Frisör", href: "#" },
     imageUrl:
-      "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80",
     preview:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
     author: {
@@ -95,13 +97,13 @@ const blogPosts = [
   },
   {
     id: 3,
-    title: "Improve your customer experience",
+    title: "Adnan Delija",
     href: "#",
     date: "Feb 12, 2020",
     datetime: "2020-02-12",
-    category: { name: "Case Study", href: "#" },
+    category: { name: "Barberare", href: "#" },
     imageUrl:
-      "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+      "https://images.unsplash.com/photo-1536164261511-3a17e671d380?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80",
     preview:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
     author: {
@@ -117,7 +119,7 @@ const blogPosts = [
 const Home: NextPage = () => {
   return (
     <>
-      <div className="pt-10 bg-custom sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+      <div className="pt-16 bg-custom sm:pt-16 lg:pt-16 lg:pb-14 lg:overflow-hidden">
         <div className="mx-auto max-w-7xl lg:px-8">
           <div className="absolute left-0 right-0 text-5xl md:text-7xl z-10 max-w-xs mx-auto md:leading-[3.5rem] -mt-10 md:mt-0">
             <p className="md:ml-11 ml-20 hero-font">HAIR</p>
@@ -125,13 +127,10 @@ const Home: NextPage = () => {
             <p className="md:ml-16 ml-24 hero-font">GROUP</p>
           </div>
           <div className="absolute left-0 right-0 z-10 mx-auto max-w-xs flex justify-end">
-            <div className="-mr-11 -mt-11">
-              <Image
-                className="ml-10"
-                src={plogo}
-                width={150}
-                height={150}
-                unoptimized={true}
+            <div className="md:-mr-11 md:-mt-11 mr-6 -mt-10">
+              <img
+                className="h-24 w-24 md:h-40 md:w-40"
+                src={plogo.src}
                 alt=""
               />
             </div>
@@ -205,7 +204,63 @@ const Home: NextPage = () => {
           </p>
           <div className="mt-12">
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {features.map((feature) => (
+              <div className="pt-6">
+                <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                  <div className="-mt-6">
+                    <div>
+                      <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-teal-700 rounded-md shadow-lg">
+                        <img src={manicure.src} alt="" className="w-28" />
+                      </span>
+                    </div>
+                    <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                      Manikyr
+                    </h3>
+                    <p className="mt-5 text-base text-gray-500">
+                      Ta hand om dina naglar. Låt någon av våra nagelterapeuter
+                      ge dig en professionell manikyr som ger dig starka och
+                      snygga naglar och nagelband.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="pt-6">
+                <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                  <div className="-mt-6">
+                    <div>
+                      <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-teal-700 rounded-md shadow-lg">
+                        <img src={hair.src} alt="" className="w-28" />
+                      </span>
+                    </div>
+                    <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                      Frisör
+                    </h3>
+                    <p className="mt-5 text-base text-gray-500">
+                      Varmt välkommen till vår frisördel. Vi erbjuder ett
+                      komplett utbud av professionella frisörbehandlingar.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="pt-6">
+                <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                  <div className="-mt-6">
+                    <div>
+                      <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-teal-700 rounded-md shadow-lg">
+                        <img src={barber.src} alt="" className="w-28" />
+                      </span>
+                    </div>
+                    <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                      Barberare
+                    </h3>
+                    <p className="mt-5 text-base text-gray-500">
+                      Luta dig tillbaka och koppla av i vår antika läderstol
+                      medan vi klipper, stylar, rakar och trimmar ditt skägg
+                      eller hår.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/* {features.map((feature) => (
                 <div key={feature.name} className="pt-6">
                   <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                     <div className="-mt-6">
@@ -226,7 +281,7 @@ const Home: NextPage = () => {
                     </div>
                   </div>
                 </div>
-              ))}
+              ))} */}
             </div>
           </div>
         </div>
@@ -244,7 +299,7 @@ const Home: NextPage = () => {
               <div className="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
                 <img
                   className="object-cover lg:h-full lg:w-full"
-                  src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
+                  src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
                   alt=""
                 />
               </div>
@@ -263,18 +318,15 @@ const Home: NextPage = () => {
                     <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                   </svg>
                   <p className="mt-6 text-2xl font-medium text-white">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    urna nulla vitae laoreet augue. Amet feugiat est integer
-                    dolor auctor adipiscing nunc urna, sit.
+                    Lyxig behandling med varma handdukar, rakning med kniv och
+                    superproffsig frisör/barberare! Rekommenderar Adnan varmt då
+                    han tar sig tid och ger en helhetsupplevelse där jag kände
+                    mig otroligt bortskämd!
                   </p>
                 </div>
                 <footer className="mt-6">
-                  <p className="text-base font-medium text-white">
-                    Judith Black
-                  </p>
-                  <p className="text-base font-medium text-cyan-100">
-                    CEO at PureInsights
-                  </p>
+                  <p className="text-base font-medium text-white">Anton Y.</p>
+                  <p className="text-base font-medium text-cyan-100"></p>
                 </footer>
               </blockquote>
             </div>
@@ -287,10 +339,10 @@ const Home: NextPage = () => {
         <div className="relative">
           <div className="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
             <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">
-              Learn
+              Om oss
             </h2>
             <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-              Helpful Resources
+              Pristine Staff
             </p>
             <p className="mt-5 mx-auto max-w-prose text-xl text-gray-500">
               Phasellus lorem quam molestie id quisque diam aenean nulla in.
@@ -306,7 +358,7 @@ const Home: NextPage = () => {
               >
                 <div className="flex-shrink-0">
                   <img
-                    className="h-48 w-full object-cover"
+                    className="h-96 w-full object-cover"
                     src={post.imageUrl}
                     alt=""
                   />
@@ -362,12 +414,12 @@ const Home: NextPage = () => {
         <div className="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
           <img
             className="w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100"
+            src="https://images.unsplash.com/photo-1504022462188-88f023db97bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
             alt=""
           />
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-600 mix-blend-multiply"
+            className="absolute inset-0 bg-gray-50 mix-blend-color"
           />
         </div>
         <div className="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">

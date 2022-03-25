@@ -11,7 +11,7 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { ChevronRightIcon, ExternalLinkIcon } from "@heroicons/react/solid";
-import plogo from "../assets/p-logo.png";
+import plogo from "../assets/plogo-svg.svg";
 import Image from "next/image";
 
 const navigation = [
@@ -124,13 +124,7 @@ export const Layout: React.FC = ({ children }) => {
                 <div className="flex items-center justify-between w-full md:w-full">
                   <a href="#">
                     <span className="sr-only">Workflow</span>
-                    <Image
-                      className="h-8 w-8 sm:h-10"
-                      src={plogo}
-                      alt=""
-                      width={50}
-                      height={50}
-                    />
+                    <img className="h-16 w-16" src={plogo.src} alt="" />
                   </a>
                   <div className="-mr-2 flex items-center md:hidden">
                     <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
@@ -173,7 +167,7 @@ export const Layout: React.FC = ({ children }) => {
           >
             <Popover.Panel
               focus
-              className="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden"
+              className="absolute z-20 top-0 inset-x-0 p-2 transition transform origin-top md:hidden"
             >
               <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="px-5 pt-4 flex items-center justify-between">
