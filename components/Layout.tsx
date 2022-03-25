@@ -15,10 +15,10 @@ import plogo from "../assets/p-logo.png";
 import Image from "next/image";
 
 const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
+  { name: "Om Pristine", href: "#" },
+  { name: "Tjänster", href: "#" },
+  { name: "Prislista", href: "#" },
+  { name: "Kontakt", href: "#" },
 ];
 const footerNavigation = {
   solutions: [
@@ -121,7 +121,7 @@ export const Layout: React.FC = ({ children }) => {
               aria-label="Global"
             >
               <div className="flex items-center flex-1">
-                <div className="flex items-center justify-between w-full md:w-auto">
+                <div className="flex items-center justify-between w-full md:w-full">
                   <a href="#">
                     <span className="sr-only">Workflow</span>
                     <Image
@@ -139,12 +139,12 @@ export const Layout: React.FC = ({ children }) => {
                     </Popover.Button>
                   </div>
                 </div>
-                <div className="hidden space-x-8 md:flex md:ml-10">
+                <div className="hidden space-x-8 md:flex md:mx-10">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="text-base font-medium text-gray-700 hover:text-gray-500"
+                      className="text-base font-medium text-gray-700 hover:text-gray-500 whitespace-nowrap"
                     >
                       {item.name}
                     </a>
@@ -154,15 +154,9 @@ export const Layout: React.FC = ({ children }) => {
               <div className="hidden md:flex md:items-center md:space-x-6">
                 <a
                   href="#"
-                  className="text-base font-medium text-gray-700 hover:text-gray-500"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium text-white bg-custom2 hover:bg-gray-700"
                 >
-                  Log in
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-custom2 hover:bg-gray-700"
-                >
-                  Start free trial
+                  BOKA TID
                 </a>
               </div>
             </nav>

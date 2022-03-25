@@ -10,6 +10,8 @@ import {
   ShieldCheckIcon,
   XIcon,
 } from "@heroicons/react/outline";
+
+import waxIcon from "../assets/icons/wax.png";
 import { ChevronRightIcon, ExternalLinkIcon } from "@heroicons/react/solid";
 import plogo from "../assets/p-logo.png";
 import Image from "next/image";
@@ -118,9 +120,9 @@ const Home: NextPage = () => {
       <div className="pt-10 bg-custom sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
         <div className="mx-auto max-w-7xl lg:px-8">
           <div className="absolute left-0 right-0 text-5xl md:text-7xl z-10 max-w-xs mx-auto md:leading-[3.5rem] -mt-10 md:mt-0">
-            <p className="md:ml-11 ml-20">HAIR</p>
-            <p className="md:-ml-10 ml-10">SALON</p>
-            <p className="md:ml-16 ml-24">GROUP</p>
+            <p className="md:ml-11 ml-20 hero-font">HAIR</p>
+            <p className="md:-ml-10 ml-10 hero-font">SALON</p>
+            <p className="md:ml-16 ml-24 hero-font">GROUP</p>
           </div>
           <div className="absolute left-0 right-0 z-10 mx-auto max-w-xs flex justify-end">
             <div className="-mr-11 -mt-11">
@@ -166,10 +168,10 @@ const Home: NextPage = () => {
         <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
           <div>
             <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">
-              Serverless
+              Pristine
             </h2>
             <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-              No server? No problem.
+              Salongen
             </p>
             <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
               Phasellus lorem quam molestie id quisque diam aenean nulla in.
@@ -179,8 +181,8 @@ const Home: NextPage = () => {
           </div>
           <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80">
             <img
-              className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
-              src="https://tailwindui.com/img/component-images/green-project-app-screenshot.jpg"
+              className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 object-position"
+              src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2036&q=80"
               alt=""
             />
           </div>
@@ -191,10 +193,10 @@ const Home: NextPage = () => {
       <div className="relative bg-custom py-16 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
           <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">
-            Deploy faster
+            Tjänster
           </h2>
           <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-            Everything you need to deploy your app
+            Allt du behöver under ett och samma tak
           </p>
           <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
             Phasellus lorem quam molestie id quisque diam aenean nulla in.
@@ -208,7 +210,7 @@ const Home: NextPage = () => {
                   <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                     <div className="-mt-6">
                       <div>
-                        <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-md shadow-lg">
+                        <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-teal-700 rounded-md shadow-lg">
                           <feature.icon
                             className="h-6 w-6 text-white"
                             aria-hidden="true"
