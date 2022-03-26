@@ -63,7 +63,7 @@ const blogPosts = [
     href: "#",
     date: "Mar 16, 2020",
     datetime: "2020-03-16",
-    category: { name: "Beauty", href: "#" },
+    category: { name: "BEAUTY", href: "#" },
     imageUrl:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
     preview:
@@ -82,7 +82,7 @@ const blogPosts = [
     href: "#",
     date: "Mar 10, 2020",
     datetime: "2020-03-10",
-    category: { name: "Frisör", href: "#" },
+    category: { name: "FRISÖR", href: "#" },
     imageUrl:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80",
     preview:
@@ -101,7 +101,7 @@ const blogPosts = [
     href: "#",
     date: "Feb 12, 2020",
     datetime: "2020-02-12",
-    category: { name: "Barberare", href: "#" },
+    category: { name: "BARBERARE", href: "#" },
     imageUrl:
       "https://images.unsplash.com/photo-1536164261511-3a17e671d380?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80",
     preview:
@@ -379,7 +379,7 @@ const Home: NextPage = () => {
                       </p>
                     </a>
                   </div>
-                  <div className="mt-6 flex items-center">
+                  {/* <div className="mt-6 flex items-center">
                     <div className="flex-shrink-0">
                       <a href={post.author.href}>
                         <img
@@ -401,7 +401,7 @@ const Home: NextPage = () => {
                         <span>{post.readingLength} read</span>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
@@ -424,11 +424,9 @@ const Home: NextPage = () => {
         </div>
         <div className="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
           <div className="md:ml-auto md:w-1/2 md:pl-10">
-            <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300">
-              Award winning support
-            </h2>
+            <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300"></h2>
             <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
-              We’re here to help
+              Välkommen in till oss
             </p>
             <p className="mt-3 text-lg text-gray-300">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
@@ -442,7 +440,7 @@ const Home: NextPage = () => {
                   href="#"
                   className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50"
                 >
-                  Visit the help center
+                  Boka tid
                   <ExternalLinkIcon
                     className="-mr-1 ml-3 h-5 w-5 text-gray-400"
                     aria-hidden="true"

@@ -222,14 +222,11 @@ export const Layout: React.FC = ({ children }) => {
           <div className="max-w-md mx-auto pt-12 px-4 sm:max-w-7xl sm:px-6 lg:pt-16 lg:px-8">
             <div className="xl:grid xl:grid-cols-3 xl:gap-8">
               <div className="space-y-8 xl:col-span-1">
-                <img
-                  className="h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg"
-                  alt="Company name"
-                />
+                <img className="h-10" src={plogo.src} alt="Company name" />
                 <p className="text-gray-500 text-base">
-                  Making the world a better place through constructing elegant
-                  hierarchies.
+                  Vårt främsta mål är att du som kund ska känna dig nöjd. Vi är
+                  väldigt måna om att förmedla en professionell och skön
+                  atmosfär.
                 </p>
                 <div className="flex space-x-6">
                   {footerNavigation.social.map((item) => (
@@ -321,7 +318,7 @@ export const Layout: React.FC = ({ children }) => {
             </div>
             <div className="mt-12 border-t border-gray-200 py-8">
               <p className="text-base text-gray-400 xl:text-center">
-                &copy; 2020 Workflow, Inc. All rights reserved.
+                &copy; 2022 Pristine. All rights reserved.
               </p>
             </div>
           </div>
