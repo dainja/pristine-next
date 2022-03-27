@@ -126,7 +126,6 @@ const Home: NextPage = () => {
       <Head>
         <title>Pristine - Hår & skönhetssalong i Växjö</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="shortcut icon" href="../assets/icons/favicon.ico" />
       </Head>
       <div className="pt-16 bg-custom sm:pt-16 lg:pt-16 lg:pb-14 lg:overflow-hidden">
         <div className="mx-auto max-w-7xl lg:px-8">
