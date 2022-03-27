@@ -223,10 +223,10 @@ export const Layout: React.FC = ({ children }) => {
             <div className="xl:grid xl:grid-cols-3 xl:gap-8">
               <div className="space-y-8 xl:col-span-1">
                 <img className="w-28" src={plogoText.src} alt="Company name" />
-                <p className="text-gray-500 text-base">
+                {/* <p className="text-gray-500 text-base">
                   Salongen där vi strävar efter att ge en upplevelse utöver det
                   vanliga.
-                </p>
+                </p> */}
                 <div className="flex space-x-6">
                   {footerNavigation.social.map((item) => (
                     <a

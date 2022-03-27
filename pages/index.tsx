@@ -19,6 +19,7 @@ import hair from "../assets/icons/hair.png";
 import { ChevronRightIcon, ExternalLinkIcon } from "@heroicons/react/solid";
 import plogo from "../assets/plogo-svg.svg";
 import Image from "next/image";
+import Head from "next/head";
 
 const features = [
   {
@@ -61,25 +62,6 @@ const features = [
 const blogPosts = [
   {
     id: 1,
-    title: "Theresa P. Meza",
-    href: "#",
-    date: "Mar 16, 2020",
-    datetime: "2020-03-16",
-    category: { name: "BEAUTY", href: "#" },
-    imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
-    preview:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
-    author: {
-      name: "Roel Aufderehar",
-      imageUrl:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      href: "#",
-    },
-    readingLength: "6 min",
-  },
-  {
-    id: 2,
     title: "Cheryl G. Yates",
     href: "#",
     date: "Mar 10, 2020",
@@ -97,9 +79,10 @@ const blogPosts = [
     },
     readingLength: "4 min",
   },
+
   {
-    id: 3,
-    title: "Adnan Delija",
+    id: 2,
+    title: "Adnan D.",
     href: "#",
     date: "Feb 12, 2020",
     datetime: "2020-02-12",
@@ -116,17 +99,41 @@ const blogPosts = [
     },
     readingLength: "11 min",
   },
+  {
+    id: 3,
+    title: "Theresa P. Meza",
+    href: "#",
+    date: "Mar 16, 2020",
+    datetime: "2020-03-16",
+    category: { name: "BEAUTY", href: "#" },
+    imageUrl:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
+    preview:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+    author: {
+      name: "Roel Aufderehar",
+      imageUrl:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      href: "#",
+    },
+    readingLength: "6 min",
+  },
 ];
 
 const Home: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>Pristine - Hår & skönhetssalong i Växjö</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="shortcut icon" href="../assets/icons/favicon.ico" />
+      </Head>
       <div className="pt-16 bg-custom sm:pt-16 lg:pt-16 lg:pb-14 lg:overflow-hidden">
         <div className="mx-auto max-w-7xl lg:px-8">
           <div className="absolute left-0 right-0 text-5xl md:text-7xl z-10 max-w-xs mx-auto md:leading-[3.5rem] -mt-10 md:mt-0">
-            <p className="md:ml-11 ml-20 hero-font">HAIR</p>
-            <p className="md:-ml-10 ml-10 hero-font">SALON</p>
-            <p className="md:ml-16 ml-24 hero-font">GROUP</p>
+            <p className="md:ml-11 ml-20 hero-font">HÅR</p>
+            <p className="md:-ml-14 ml-5 hero-font">SALONG</p>
+            <p className="md:ml-16 ml-24 hero-font">GRUPP</p>
           </div>
           <div className="absolute left-0 right-0 z-10 mx-auto max-w-xs flex justify-end">
             <div className="md:-mr-11 md:-mt-11 mr-6 -mt-10">
@@ -139,9 +146,9 @@ const Home: NextPage = () => {
           </div>
           {/* <div className="grid grid-cols-3 gap-2"> */}
           <div className="flex justify-center gap-2">
-            <div className="mt-24 relative h-[24rem] md:h-[38rem] flex justify-end">
+            <div className="md:mt-32 mt-20 relative h-[24rem] md:h-[38rem] flex justify-end">
               <img
-                src="https://images.unsplash.com/photo-1587729927069-ef3b7a5ab9b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1976&q=80"
+                src="https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
                 alt=""
                 className="w-4/5 md:w-full h-full object-cover"
               />
@@ -201,32 +208,13 @@ const Home: NextPage = () => {
           <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
             Allt du behöver under ett och samma tak
           </p>
-          <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
+          {/* <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
             Phasellus lorem quam molestie id quisque diam aenean nulla in.
             Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
             condimentum id viverra nulla.
-          </p>
+          </p> */}
           <div className="mt-12">
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="pt-6">
-                <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-                  <div className="-mt-6">
-                    <div>
-                      <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-teal-700 rounded-md shadow-lg">
-                        <img src={makeup1.src} alt="" className="w-28" />
-                      </span>
-                    </div>
-                    <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                      Beauty
-                    </h3>
-                    <p className="mt-5 text-base text-gray-500">
-                      Ta hand om dina naglar. Låt någon av våra nagelterapeuter
-                      ge dig en professionell manikyr som ger dig starka och
-                      snygga naglar och nagelband.
-                    </p>
-                  </div>
-                </div>
-              </div>
               <div className="pt-6">
                 <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                   <div className="-mt-6">
@@ -260,6 +248,25 @@ const Home: NextPage = () => {
                       Luta dig tillbaka och koppla av i vår antika läderstol
                       medan vi klipper, stylar, rakar och trimmar ditt skägg
                       eller hår.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="pt-6">
+                <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                  <div className="-mt-6">
+                    <div>
+                      <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-teal-700 rounded-md shadow-lg">
+                        <img src={makeup1.src} alt="" className="w-28" />
+                      </span>
+                    </div>
+                    <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                      Beauty
+                    </h3>
+                    <p className="mt-5 text-base text-gray-500">
+                      Ta hand om dina naglar. Låt någon av våra nagelterapeuter
+                      ge dig en professionell manikyr som ger dig starka och
+                      snygga naglar och nagelband.
                     </p>
                   </div>
                 </div>
@@ -342,17 +349,11 @@ const Home: NextPage = () => {
       <div className="relative bg-custom1 py-16 sm:py-24 lg:py-32">
         <div className="relative">
           <div className="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-            <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">
-              Om oss
-            </h2>
+            <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase"></h2>
             <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-              Pristine Staff
+              Om oss
             </p>
-            <p className="mt-5 mx-auto max-w-prose text-xl text-gray-500">
-              Phasellus lorem quam molestie id quisque diam aenean nulla in.
-              Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
-              condimentum id viverra nulla.
-            </p>
+            <p className="mt-5 mx-auto max-w-prose text-xl text-gray-500"></p>
           </div>
           <div className="mt-12 mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl">
             {blogPosts.map((post) => (
@@ -426,7 +427,7 @@ const Home: NextPage = () => {
             className="absolute inset-0 bg-gray-50 mix-blend-color"
           />
         </div>
-        <div className="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
+        <div className="relative mx-auto max-w-md px-4 py-6 sm:max-w-7xl sm:px-6 sm:py-10 md:py-12 lg:px-8 lg:py-16">
           <div className="md:ml-auto md:w-1/2 md:pl-10">
             <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300"></h2>
             <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -434,7 +435,7 @@ const Home: NextPage = () => {
             </p>
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-10">
               <div>
-                <h2 className="italic text-base font-semibold tracking-wider text-gray-300">
+                <h2 className="italic text-base font-semibold tracking-wider text-red-300 ">
                   Adress
                 </h2>
                 <div className="mt-2 text-white">
@@ -448,32 +449,74 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="lg:max-w-[14rem] max-w-[14rem]">
-                <h2 className="italic text-base font-semibold tracking-wider text-gray-300">
-                  Receptionen är bemannad
+                <h2 className="italic text-base font-semibold tracking-wider text-red-300 ">
+                  Öppettider
                 </h2>
                 <div className="mt-2 text-white">
                   <div>
                     <div className="flex justify-between">
-                      <span>Måndag - Fredag</span> <span>12 - 19</span>
+                      <span>Måndag - Fredag</span> <span>9.00 - 18.00</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Lördag</span> <span>10 - 15</span>
+                      <span>Lördag</span> <span>9.00 - 15.00</span>
                     </div>
                   </div>
                 </div>
               </div>
+              <div>
+                <h2 className="italic text-base font-semibold tracking-wider text-red-300 ">
+                  Betalning
+                </h2>
+                <div className="mt-2 text-white">
+                  <p>
+                    Tänk på att vi inte tar emot kontanter vid betalning i vår
+                    fysiska butik.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <h2 className="italic text-base font-semibold tracking-wider text-red-300 ">
+                  Debitering
+                </h2>
+                <div className="mt-2 text-white">
+                  <p>
+                    Avbokning av behandling ska ske senast 24 timmar före bokad
+                    tid. Vid uteblivet besök debiteras 75% av kostnaden.
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="mt-8">
-              <div className="inline-flex rounded-md shadow">
+              <div className="inline-flex rounded-md shadow justify-between">
                 <a
                   href="#"
-                  className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50"
+                  className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50  mr-2"
                 >
                   Boka tid
                   <ExternalLinkIcon
                     className="-mr-1 ml-3 h-5 w-5 text-gray-400"
                     aria-hidden="true"
                   />
+                </a>
+                <a
+                  href="tel:+46734322770"
+                  className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 inline-block "
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                  <span>073 432 27 70</span>
                 </a>
               </div>
             </div>
