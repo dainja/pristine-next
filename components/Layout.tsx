@@ -11,7 +11,7 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { ChevronRightIcon, ExternalLinkIcon } from "@heroicons/react/solid";
-import plogo from "../assets/plogo-svg.svg";
+import plogoText from "../assets/pristine-text.svg";
 import Image from "next/image";
 
 const navigation = [
@@ -124,7 +124,7 @@ export const Layout: React.FC = ({ children }) => {
                 <div className="flex items-center justify-between w-full md:w-full">
                   <a href="#">
                     <span className="sr-only">Workflow</span>
-                    <img className="h-16 w-16" src={plogo.src} alt="" />
+                    <img className="md:w-36 w-24" src={plogoText.src} alt="" />
                   </a>
                   <div className="flex items-center md:hidden">
                     <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
@@ -169,10 +169,10 @@ export const Layout: React.FC = ({ children }) => {
               focus
               className="absolute z-20 top-0 inset-x-0 p-2 transition transform origin-top md:hidden"
             >
-              <div className="rounded-lg shadow-md bg-custom ring-1 ring-black ring-opacity-5 overflow-hidden">
+              <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="px-5 pt-4 flex items-center justify-between">
                   <div>
-                    <img className="h-12 w-auto" src={plogo.src} alt="" />
+                    <img className="w-24" src={plogoText.src} alt="" />
                   </div>
                   <div className="-mr-2">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600">
@@ -222,11 +222,10 @@ export const Layout: React.FC = ({ children }) => {
           <div className="max-w-md mx-auto pt-12 px-4 sm:max-w-7xl sm:px-6 lg:pt-16 lg:px-8">
             <div className="xl:grid xl:grid-cols-3 xl:gap-8">
               <div className="space-y-8 xl:col-span-1">
-                <img className="h-10" src={plogo.src} alt="Company name" />
+                <img className="w-28" src={plogoText.src} alt="Company name" />
                 <p className="text-gray-500 text-base">
-                  Vårt främsta mål är att du som kund ska känna dig nöjd. Vi är
-                  väldigt måna om att förmedla en professionell och skön
-                  atmosfär.
+                  Salongen där vi strävar efter att ge en upplevelse utöver det
+                  vanliga.
                 </p>
                 <div className="flex space-x-6">
                   {footerNavigation.social.map((item) => (

@@ -12,6 +12,8 @@ import {
 } from "@heroicons/react/outline";
 
 import manicure from "../assets/icons/manicure.png";
+import makeup from "../assets/icons/make-up.png";
+import makeup1 from "../assets/icons/make-up1.png";
 import barber from "../assets/icons/barber.png";
 import hair from "../assets/icons/hair.png";
 import { ChevronRightIcon, ExternalLinkIcon } from "@heroicons/react/solid";
@@ -170,12 +172,14 @@ const Home: NextPage = () => {
               Pristine
             </h2>
             <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-              Salongen
+              Salong Pristine
             </p>
             <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-              Phasellus lorem quam molestie id quisque diam aenean nulla in.
-              Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
-              condimentum id viverra nulla.
+              Hos oss hittar du den perfekta balansen mellan en kunnig och
+              erfaren frisör, barberare och en makeupartist med ett brett utbud.
+              Vi erbjuder alltså en härlig kombination av kompetens och en
+              bekväm samt avslappnad stämning som utgör grunden för salong
+              Pristine.
             </p>
           </div>
           <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80">
@@ -209,11 +213,11 @@ const Home: NextPage = () => {
                   <div className="-mt-6">
                     <div>
                       <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-teal-700 rounded-md shadow-lg">
-                        <img src={manicure.src} alt="" className="w-28" />
+                        <img src={makeup1.src} alt="" className="w-28" />
                       </span>
                     </div>
                     <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                      Manikyr
+                      Beauty
                     </h3>
                     <p className="mt-5 text-base text-gray-500">
                       Ta hand om dina naglar. Låt någon av våra nagelterapeuter
@@ -428,12 +432,37 @@ const Home: NextPage = () => {
             <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
               Välkommen in till oss
             </p>
-            <p className="mt-3 text-lg text-gray-300">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-              egestas tempus tellus etiam sed. Quam a scelerisque amet
-              ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat
-              quisque ut interdum tincidunt duis.
-            </p>
+            <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-10">
+              <div>
+                <h2 className="italic text-base font-semibold tracking-wider text-gray-300">
+                  Adress
+                </h2>
+                <div className="mt-2 text-white">
+                  <p>
+                    Pristine
+                    <br />
+                    Storgatan 27
+                    <br />
+                    352 30
+                  </p>
+                </div>
+              </div>
+              <div className="lg:max-w-[14rem] max-w-[14rem]">
+                <h2 className="italic text-base font-semibold tracking-wider text-gray-300">
+                  Receptionen är bemannad
+                </h2>
+                <div className="mt-2 text-white">
+                  <div>
+                    <div className="flex justify-between">
+                      <span>Måndag - Fredag</span> <span>12 - 19</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Lördag</span> <span>10 - 15</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="mt-8">
               <div className="inline-flex rounded-md shadow">
                 <a
