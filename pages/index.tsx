@@ -146,21 +146,21 @@ const Home: NextPage = () => {
           </div>
           {/* <div className="grid grid-cols-3 gap-2"> */}
           <div className="flex justify-center gap-2">
-            <div className="md:mt-32 mt-20 relative h-[24rem] md:h-[38rem] flex justify-end">
+            <div className="flex-1 md:mt-32 mt-20 relative h-[24rem] md:h-[38rem] flex justify-end">
               <img
-                src="https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
+                src="https://images.unsplash.com/photo-1617655345937-95fafc9013f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
                 alt=""
                 className="w-4/5 md:w-full h-full object-cover"
               />
             </div>
-            <div className="relative h-[24rem] md:h-[38rem] mt-36 md:mt-60">
+            <div className="flex-1 relative h-[24rem] md:h-[38rem] mt-36 md:mt-60">
               <img
                 src="https://images.unsplash.com/photo-1560869713-bf165a9cfac1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2126&q=80"
                 alt=""
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="relative h-[24rem] md:h-[38rem] mt-28 md:mt-40">
+            <div className="flex-1 relative h-[24rem] md:h-[38rem] mt-28 md:mt-40">
               <img
                 src="https://images.unsplash.com/photo-1635273051427-7c2a35ce50ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
                 alt=""
