@@ -1,26 +1,17 @@
 import type { NextPage } from "next";
 
-import {
-  CloudUploadIcon,
-  CogIcon,
-  LockClosedIcon,
-  MenuIcon,
-  RefreshIcon,
-  ServerIcon,
-  ShieldCheckIcon,
-  XIcon,
-} from "@heroicons/react/outline";
+import { ExternalLinkIcon } from "@heroicons/react/solid";
 
-import manicure from "../assets/icons/manicure.png";
-import makeup from "../assets/icons/make-up.png";
 import makeup1 from "../assets/icons/make-up1.png";
 import barber from "../assets/icons/barber.png";
 import hair from "../assets/icons/hair.png";
-import { ChevronRightIcon, ExternalLinkIcon } from "@heroicons/react/solid";
 import plogo from "../assets/plogo-svg.svg";
-import Image from "next/image";
+import map from "../assets/img/map.jpg";
+
 import Head from "next/head";
+
 import { Testimonials } from "../components/Testimonials";
+import { CustomMap } from "../components/Map";
 
 const blogPosts = [
   {
@@ -90,24 +81,25 @@ const Home: NextPage = () => {
         <title>Pristine - Hår & skönhetssalong i Växjö</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
+
       <div className="pt-16 bg-custom sm:pt-16 lg:pt-16 lg:pb-14 lg:overflow-hidden">
         <div className="mx-auto max-w-7xl lg:px-8">
-          <div className="absolute left-0 right-0 text-5xl md:text-7xl z-10 max-w-xs mx-auto md:leading-[3.5rem] -mt-10 md:mt-0">
+          <div className="absolute left-0 right-0 text-5xl md:text-7xl z-10 max-w-xs mx-auto md:leading-[3.5rem] leading-10 -mt-10 md:mt-0">
             <p className="md:ml-11 ml-20 font-aurora">HÅR</p>
-            <p className="md:-ml-14 ml-5 font-aurora">SALONG</p>
+            <p className="md:-ml-16 ml-5 font-aurora">SALONG</p>
             <p className="md:ml-16 ml-24 font-aurora">GRUPP</p>
           </div>
           <div className="absolute left-0 right-0 z-10 mx-auto max-w-xs flex justify-end">
             <div className="md:-mr-11 md:-mt-11 mr-6 -mt-10">
               <img
-                className="h-24 w-24 md:h-40 md:w-40"
+                className="h-20 w-20 md:h-40 md:w-40"
                 src={plogo.src}
                 alt=""
               />
             </div>
           </div>
           {/* <div className="grid grid-cols-3 gap-2"> */}
-          <div className="flex justify-center gap-2">
+          <div className="flex justify-center gap-2 mb-4">
             <div className="flex-1 md:mt-32 mt-20 relative h-[24rem] md:h-[38rem] flex justify-end">
               <img
                 src="https://images.unsplash.com/photo-1617655345937-95fafc9013f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
@@ -115,14 +107,14 @@ const Home: NextPage = () => {
                 className="w-4/5 md:w-full h-full object-cover"
               />
             </div>
-            <div className="flex-1 relative h-[24rem] md:h-[38rem] mt-36 md:mt-60">
+            <div className="flex-1 relative h-[24rem] md:h-[38rem] mt-32 md:mt-60">
               <img
                 src="https://images.unsplash.com/photo-1560869713-bf165a9cfac1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2126&q=80"
                 alt=""
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="flex-1 relative h-[24rem] md:h-[38rem] mt-28 md:mt-40">
+            <div className="flex-1 relative h-[24rem] md:h-[38rem] mt-24 md:mt-40">
               <img
                 src="https://images.unsplash.com/photo-1635273051427-7c2a35ce50ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
                 alt=""
@@ -137,9 +129,7 @@ const Home: NextPage = () => {
       <div className="relative bg-custom1 pt-16 sm:pt-24 lg:pt-32">
         <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
           <div>
-            <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">
-              Pristine
-            </h2>
+            <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase"></h2>
             <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl font-aurora">
               Salong Pristine
             </p>
@@ -336,19 +326,15 @@ const Home: NextPage = () => {
       <div className="relative bg-custom2">
         <div className="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
           <img
-            className="w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1504022462188-88f023db97bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+            className="w-full h-full  lg:object-none xl:object-cover object-none bg-custom2"
+            src={map.src}
             alt=""
-          />
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 bg-gray-50 mix-blend-color"
           />
         </div>
         <div className="relative mx-auto max-w-md px-4 py-6 sm:max-w-7xl sm:px-6 sm:py-10 md:py-12 lg:px-8 lg:py-16">
           <div className="md:ml-auto md:w-1/2 md:pl-10">
             <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300"></h2>
-            <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
+            <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl font-aurora">
               Välkommen in till oss
             </p>
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-10">

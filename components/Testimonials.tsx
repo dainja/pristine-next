@@ -16,28 +16,25 @@ const testimonials: Testimonial[] = [
     staff: "adnan",
     image: "/images/adnan.png",
   },
-  // {
-  //   id: 2,
-  //   text: "ardita är duktig",
-  //   author: "chet",
-  //   staff: "ardita",
-  //   image: "/images/ardita.png",
-  // },
-  // {
-  //   id: 3,
-  //   text: "donna är duktig",
-  //   author: "max",
-  //   staff: "donna",
-  //   image: "/images/donna.png",
-  // },
+  {
+    id: 2,
+    text: "ardita är duktig",
+    author: "chet",
+    staff: "ardita",
+    image: "/images/ardita.png",
+  },
+  {
+    id: 3,
+    text: "donna är duktig",
+    author: "max",
+    staff: "donna",
+    image: "/images/donna.png",
+  },
 ];
 
-export const Testimonials = () => {
-  const testimonial = useMemo(
-    () => testimonials[Math.floor(Math.random() * testimonials.length)],
-    []
-  );
-
+export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
+  testimonial,
+}) => {
   console.log("testimonial", testimonial, testimonial.image);
 
   return (
@@ -87,3 +84,13 @@ export const Testimonials = () => {
     </div>
   );
 };
+
+import { Carousel } from "./carousel/Carousel";
+
+export const Testimonials = () => (
+  <Carousel autoPlay={true} interval={5000} loop={true}>
+    {testimonials.map((item, i) => (
+      <Testimonial testimonial={item} key={i} />
+    ))}
+  </Carousel>
+);
