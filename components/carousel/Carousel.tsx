@@ -7,7 +7,7 @@ import {
 } from "framer-motion";
 
 import { CarouselProps } from "./types";
-import Slider from "./slider";
+import Slider from "./Slider";
 
 const containerStyle: React.CSSProperties = {
   position: "relative",

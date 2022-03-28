@@ -35,8 +35,6 @@ const testimonials: Testimonial[] = [
 export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
   testimonial,
 }) => {
-  console.log("testimonial", testimonial, testimonial.image);
-
   return (
     <div className="pb-16 bg-custom2 lg:pb-0 lg:z-10 lg:relative">
       <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8 flex-shrink-0">
