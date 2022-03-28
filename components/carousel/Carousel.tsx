@@ -13,7 +13,7 @@ const containerStyle: React.CSSProperties = {
   position: "relative",
   width: "100%",
   height: "100%",
-  overflowX: "hidden",
+  // overflowX: "hidden",
   display: "flex",
 };
 

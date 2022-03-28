@@ -18,15 +18,15 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    text: "ardita är duktig",
-    author: "chet",
-    staff: "ardita",
+    text: "Kan inte bli bättre! Bra resultat OCH trevligt!! Dessutom fin lokal!",
+    author: "Erika Z.",
+    staff: "adnan",
     image: "/images/ardita.png",
   },
   {
     id: 3,
-    text: "donna är duktig",
-    author: "max",
+    text: "Hos Pristine får man förutom en otrolig frisyr ett otroligt välkomnande och servicen är på topp från att man stiger in till att man lämnar frisörsalongen. Grymt nöjd!!",
+    author: "Saha A.",
     staff: "donna",
     image: "/images/donna.png",
   },
@@ -38,13 +38,13 @@ export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
   return (
     <div className="pb-16 bg-custom2 lg:pb-0 lg:z-10 lg:relative">
       <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8 flex-shrink-0">
-        <div className="relative lg:-my-8">
+        <div className="relative lg:-mt-8 lg:mb-4">
           <div
             aria-hidden="true"
             className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
           />
           <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
-            <div className="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
+            <div className="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-[29rem]">
               <img
                 className="object-cover lg:h-full lg:w-full"
                 src={testimonial.image}

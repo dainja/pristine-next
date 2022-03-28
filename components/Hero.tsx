@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
             <div className="w-full h-full relative">
               <Image
                 alt=""
-                src="/images/hero/1.jpg"
+                src="/images/hero/3.jpg"
                 sizes="33vw"
                 layout="fill"
                 className="object-cover"
@@ -44,7 +44,7 @@ export const Hero: React.FC = () => {
             <div className="w-4/5 md:w-full h-full relative">
               <Image
                 alt=""
-                src="/images/hero/3.jpg"
+                src="/images/hero/1.jpg"
                 sizes="33vw"
                 layout="fill"
                 className="object-cover"
