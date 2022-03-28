@@ -13,38 +13,16 @@ import {
 import { ChevronRightIcon, ExternalLinkIcon } from "@heroicons/react/solid";
 import plogoText from "../assets/pristine-text.svg";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const navigation = [
-  { name: "Om Pristine", href: "#" },
-  { name: "Tjänster", href: "#" },
-  { name: "Prislista", href: "#" },
-  { name: "Kontakt", href: "#" },
+  { name: "Om Pristine", href: "/#om-pristine" },
+  { name: "Tjänster", href: "/#tjanster" },
+  { name: "Prislista", href: "/prislista" },
+  { name: "Kontakt", href: "/#kontakt" },
 ];
 const footerNavigation = {
-  // solutions: [
-  //   { name: "Marketing", href: "#" },
-  //   { name: "Analytics", href: "#" },
-  //   { name: "Commerce", href: "#" },
-  //   { name: "Insights", href: "#" },
-  // ],
-  // support: [
-  //   { name: "Pricing", href: "#" },
-  //   { name: "Documentation", href: "#" },
-  //   { name: "Guides", href: "#" },
-  //   { name: "API Status", href: "#" },
-  // ],
-  // company: [
-  //   { name: "About", href: "#" },
-  //   { name: "Blog", href: "#" },
-  //   { name: "Jobs", href: "#" },
-  //   { name: "Press", href: "#" },
-  //   { name: "Partners", href: "#" },
-  // ],
-  // legal: [
-  //   { name: "Claim", href: "#" },
-  //   { name: "Privacy", href: "#" },
-  //   { name: "Terms", href: "#" },
-  // ],
   social: [
     {
       name: "Facebook",
@@ -76,22 +54,47 @@ const footerNavigation = {
 };
 
 export const Layout: React.FC = ({ children }) => {
+  const { pathname } = useRouter();
+  function handleMenuClick(
+    isOwnPage: boolean,
+    event: React.MouseEvent<HTMLAnchorElement>
+  ) {
+    if (isOwnPage) {
+      return;
+    }
+    console.log(pathname);
+  }
+
   return (
     <div className="bg-white">
       <div className="relative overflow-hidden">
-        <Popover as="header" className="relative">
-          <div className="bg-custom pt-6">
+        <Popover as="header" className="fixed w-full z-50">
+          <div className="bg-custom py-6">
             <nav
               className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
               aria-label="Global"
             >
               <div className="flex items-center flex-1">
                 <div className="flex items-center justify-between w-full md:w-full">
-                  <a href="#">
-                    <span className="sr-only">Workflow</span>
-                    <img className="md:w-36 w-24" src={plogoText.src} alt="" />
-                  </a>
+                  <Link href="/#">
+                    <a>
+                      <span className="sr-only">Pristine</span>
+                      <img
+                        className="md:w-36 w-24"
+                        src={plogoText.src}
+                        alt=""
+                      />
+                    </a>
+                  </Link>
                   <div className="flex items-center md:hidden">
+                    <a
+                      href="https://www.bokadirekt.se/places/pristine-40594"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium text-white bg-custom2 hover:bg-gray-700 mr-4 rounded"
+                    >
+                      BOKA TID
+                    </a>
                     <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
                       <span className="sr-only">Open main menu</span>
                       <MenuIcon className="h-6 w-6" aria-hidden="true" />
@@ -100,20 +103,20 @@ export const Layout: React.FC = ({ children }) => {
                 </div>
                 <div className="hidden space-x-8 md:flex md:mx-10">
                   {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="text-base font-medium text-gray-700 hover:text-gray-500 whitespace-nowrap"
-                    >
-                      {item.name}
-                    </a>
+                    <Link key={item.name} href={item.href}>
+                      <a className="text-base font-medium text-gray-700 hover:text-gray-500 whitespace-nowrap">
+                        {item.name}
+                      </a>
+                    </Link>
                   ))}
                 </div>
               </div>
               <div className="hidden md:flex md:items-center md:space-x-6">
                 <a
-                  href="#"
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium text-white bg-custom2 hover:bg-gray-700"
+                  href="https://www.bokadirekt.se/places/pristine-40594"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium text-white bg-custom2 hover:bg-gray-700 rounded"
                 >
                   BOKA TID
                 </a>
@@ -160,7 +163,9 @@ export const Layout: React.FC = ({ children }) => {
                   </div>
                   <div className="mt-6 px-5">
                     <a
-                      href="#"
+                      href="https://www.bokadirekt.se/places/pristine-40594"
+                      target="_blank"
+                      rel="noreferrer"
                       className="block text-center w-full py-3 px-4  shadow bg-custom2 hover:bg-gray-700 text-white font-medium"
                     >
                       BOKA TID
@@ -179,7 +184,7 @@ export const Layout: React.FC = ({ children }) => {
             </Popover.Panel>
           </Transition>
         </Popover>
-        <main>{children}</main>
+        <main className="mt-20">{children}</main>
         <footer className="bg-gray-50" aria-labelledby="footer-heading">
           <h2 id="footer-heading" className="sr-only">
             Footer

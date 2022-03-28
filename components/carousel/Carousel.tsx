@@ -15,6 +15,7 @@ const containerStyle: React.CSSProperties = {
   height: "100%",
   // overflowX: "hidden",
   display: "flex",
+  backgroundColor: "#efece7",
 };
 
 const transition: AnimationOptions<any> = {

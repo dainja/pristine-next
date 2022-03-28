@@ -53,7 +53,7 @@ export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
             </div>
           </div>
         </div>
-        <div className="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
+        <div className="mt-8 lg:m-0 lg:col-span-2 lg:pl-8">
           <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0 lg:py-20 lg:max-w-none">
             <blockquote>
               <div>
@@ -86,7 +86,7 @@ export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
 import { Carousel } from "./carousel/Carousel";
 
 export const Testimonials = () => (
-  <Carousel autoPlay={true} interval={5000} loop={true}>
+  <Carousel autoPlay={false} interval={10000} loop={true}>
     {testimonials.map((item, i) => (
       <Testimonial testimonial={item} key={i} />
     ))}
