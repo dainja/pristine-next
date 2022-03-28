@@ -18,6 +18,10 @@ const Home: NextPage = () => {
       <Head>
         <title>Pristine - Hår & skönhetssalong i Växjö</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Luta dig tillbaka och koppla av i vår antika läderstol medan vi klipper, stylar, rakar och trimmar ditt skägg eller hår. Pristine Barbershop är inte en vanliga frisörsalong, det är också en plats för social interaktion och allmän diskussion. Pristine i Växjö, en frisörsalong där alla är välkomna."
+        />
       </Head>
 
       <Hero />
