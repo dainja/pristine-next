@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
               <Image
                 alt=""
                 src="/images/hero/2.jpg"
-                sizes="320 640 750"
+                sizes="33vw"
                 layout="fill"
                 className="object-cover"
                 priority
@@ -33,7 +33,7 @@ export const Hero: React.FC = () => {
               <Image
                 alt=""
                 src="/images/hero/1.jpg"
-                sizes="320 640 750"
+                sizes="33vw"
                 layout="fill"
                 className="object-cover"
                 priority
@@ -45,7 +45,7 @@ export const Hero: React.FC = () => {
               <Image
                 alt=""
                 src="/images/hero/3.jpg"
-                sizes="320 640 750"
+                sizes="33vw"
                 layout="fill"
                 className="object-cover"
                 priority
