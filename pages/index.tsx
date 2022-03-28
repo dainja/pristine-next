@@ -130,9 +130,9 @@ const Home: NextPage = () => {
       <div className="pt-16 bg-custom sm:pt-16 lg:pt-16 lg:pb-14 lg:overflow-hidden">
         <div className="mx-auto max-w-7xl lg:px-8">
           <div className="absolute left-0 right-0 text-5xl md:text-7xl z-10 max-w-xs mx-auto md:leading-[3.5rem] -mt-10 md:mt-0">
-            <p className="md:ml-11 ml-20 hero-font">HÅR</p>
-            <p className="md:-ml-14 ml-5 hero-font">SALONG</p>
-            <p className="md:ml-16 ml-24 hero-font">GRUPP</p>
+            <p className="md:ml-11 ml-20 font-aurora">HÅR</p>
+            <p className="md:-ml-14 ml-5 font-aurora">SALONG</p>
+            <p className="md:ml-16 ml-24 font-aurora">GRUPP</p>
           </div>
           <div className="absolute left-0 right-0 z-10 mx-auto max-w-xs flex justify-end">
             <div className="md:-mr-11 md:-mt-11 mr-6 -mt-10">
@@ -177,7 +177,7 @@ const Home: NextPage = () => {
             <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">
               Pristine
             </h2>
-            <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+            <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl font-aurora">
               Salong Pristine
             </p>
             <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
@@ -204,7 +204,7 @@ const Home: NextPage = () => {
           <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">
             Tjänster
           </h2>
-          <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+          <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl font-aurora">
             Allt du behöver under ett och samma tak
           </p>
           {/* <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
@@ -349,7 +349,7 @@ const Home: NextPage = () => {
         <div className="relative">
           <div className="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
             <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase"></h2>
-            <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+            <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl  font-aurora">
               Om oss
             </p>
             <p className="mt-5 mx-auto max-w-prose text-xl text-gray-500"></p>
