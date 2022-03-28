@@ -86,7 +86,7 @@ export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
 import { Carousel } from "./carousel/Carousel";
 
 export const Testimonials = () => (
-  <Carousel autoPlay={false} interval={10000} loop={true}>
+  <Carousel autoPlay={true} interval={10000} loop={true}>
     {testimonials.map((item, i) => (
       <Testimonial testimonial={item} key={i} />
     ))}
