@@ -22,10 +22,16 @@ const Home: NextPage = () => {
 
       <Hero />
       <Blurb />
-      <Services />
+      <section id="tjanster" className="pt-12 -mt-12">
+        <Services />
+      </section>
       <Testimonials />
-      <About />
-      <Contact />
+      <section id="om-pristine" className="pt-12 -mt-12">
+        <About />
+      </section>
+      <section id="kontakt" className="pt-12 -mt-12">
+        <Contact />
+      </section>
     </>
   );
 };

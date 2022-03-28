@@ -1,20 +1,8 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import {
-  CloudUploadIcon,
-  CogIcon,
-  LockClosedIcon,
-  MenuIcon,
-  RefreshIcon,
-  ServerIcon,
-  ShieldCheckIcon,
-  XIcon,
-} from "@heroicons/react/outline";
-import { ChevronRightIcon, ExternalLinkIcon } from "@heroicons/react/solid";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import plogoText from "../assets/pristine-text.svg";
-import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 const navigation = [
   { name: "Om Pristine", href: "/#om-pristine" },
@@ -54,17 +42,6 @@ const footerNavigation = {
 };
 
 export const Layout: React.FC = ({ children }) => {
-  const { pathname } = useRouter();
-  function handleMenuClick(
-    isOwnPage: boolean,
-    event: React.MouseEvent<HTMLAnchorElement>
-  ) {
-    if (isOwnPage) {
-      return;
-    }
-    console.log(pathname);
-  }
-
   return (
     <div className="bg-white">
       <div className="relative overflow-hidden">
@@ -152,13 +129,11 @@ export const Layout: React.FC = ({ children }) => {
                 <div className="pt-5 pb-6">
                   <div className="px-2 space-y-1">
                     {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </a>
+                      <Link key={item.name} href={item.href}>
+                        <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">
+                          {item.name}
+                        </a>
+                      </Link>
                     ))}
                   </div>
                   <div className="mt-6 px-5">
