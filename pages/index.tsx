@@ -15,7 +15,16 @@ const Home: NextPage = () => {
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <NextSeo description="Hos oss hittar du den perfekta balansen mellan en kunnig och erfaren frisör, barberare och en makeupartist med ett brett utbud. Vi erbjuder alltså en härlig kombination av kompetens och en bekväm samt avslappnad stämning som utgör grunden för salong Pristine." />
+      <NextSeo
+        openGraph={{
+          images: [
+            {
+              url: "/api/og-image/start.png",
+            },
+          ],
+        }}
+        description="Hos oss hittar du den perfekta balansen mellan en kunnig och erfaren frisör, barberare och en makeupartist med ett brett utbud. Vi erbjuder alltså en härlig kombination av kompetens och en bekväm samt avslappnad stämning som utgör grunden för salong Pristine."
+      />
 
       <Hero />
       <Blurb />
