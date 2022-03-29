@@ -92,8 +92,6 @@ export const About: React.FC = () => {
                     src={post.image}
                     placeholder="blur"
                     alt=""
-                    width="600"
-                    height="600"
                   />
                 </div>
               </div>

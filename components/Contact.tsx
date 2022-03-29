@@ -13,8 +13,6 @@ export const Contact: React.FC = () => {
           src={map}
           placeholder="blur"
           alt=""
-          width="761"
-          height="825"
           className="lg:object-none xl:object-cover object-none "
         />
       </div>

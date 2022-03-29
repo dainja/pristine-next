@@ -51,8 +51,6 @@ export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
                 src={testimonial.image}
                 placeholder="blur"
                 alt=""
-                width="600"
-                height="600"
               />
             </div>
           </div>
