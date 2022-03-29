@@ -68,7 +68,9 @@ const Home: NextPage<Props> = ({ groups }) => {
 };
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const baseUrl = process.env.VERCEL_URL ?? "http://localhost:3000";
+  const baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000";
   const res = await fetch(`${baseUrl}/api/pricelist`);
   const props = await res.json();
   return {
