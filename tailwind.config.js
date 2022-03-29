@@ -13,6 +13,9 @@ module.exports = {
       colors: {
         teal: colors.teal,
         cyan: colors.cyan,
+        custom: "#f6f5f1",
+        custom1: "#efece7",
+        custom2: "#0a454d",
       },
     },
   },

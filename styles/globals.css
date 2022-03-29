@@ -24,24 +24,7 @@ a {
   box-sizing: border-box;
 }
 
-.bg-custom {
-  background-color: #f6f5f1;
-}
-.bg-custom1 {
-  background-color: #efece7;
-}
-
-.bg-custom2 {
-  background-color: #0a454d;
-}
-
-/* @font-face {
-  font-family: "Harmony";
-  src: url("C:/Users/LGND/Desktop/pristine-next/fonts/Harmony.otf");
-} */
-
 .hero-font {
-  /* font-family: "Harmony", serif; */
   font-weight: 100;
 }
 
