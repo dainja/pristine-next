@@ -18,15 +18,14 @@ export const Blurb: React.FC = () => {
           </p>
         </div>
         <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80 relative">
-          <div className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5">
-            <Image
-              alt=""
-              src={blurb}
-              layout="responsive"
-              objectFit="cover"
-              placeholder="blur"
-            />
-          </div>
+          <Image
+            alt=""
+            src={blurb}
+            layout="responsive"
+            objectFit="cover"
+            placeholder="blur"
+            className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
+          />
         </div>
       </div>
     </div>
