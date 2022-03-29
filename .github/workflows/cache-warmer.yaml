@@ -1,0 +1,12 @@
+name: cache-warmer
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger pricelist generation
+        run: |
+          curl --request GET \
+          --url 'https://www.pristinevxo.se/prislista'
