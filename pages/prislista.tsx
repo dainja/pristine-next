@@ -15,6 +15,8 @@ const Home: NextPage<Props> = ({ groups }) => {
           images: [
             {
               url: "/api/og-image/pricelist.png",
+              width: 1200,
+              height: 600,
             },
           ],
         }}

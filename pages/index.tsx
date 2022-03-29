@@ -20,6 +20,8 @@ const Home: NextPage = () => {
           images: [
             {
               url: "/api/og-image/start.png",
+              width: 1200,
+              height: 600,
             },
           ],
         }}
