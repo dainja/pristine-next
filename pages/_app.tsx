@@ -2,8 +2,13 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { DefaultSeo } from "next-seo";
 import { Layout } from "../components/Layout";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const { pathname } = useRouter();
+  if (pathname === "/og-image") {
+    return <Component {...pageProps} />;
+  }
   return (
     <Layout>
       <DefaultSeo
