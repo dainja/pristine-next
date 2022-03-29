@@ -1,13 +1,13 @@
-import { NextPage } from "next";
-import { useRouter } from "next/router";
+import { GetServerSideProps, NextPage } from "next";
 import { getImageConfig } from "./";
 import plogoText from "../../assets/pristine-text.svg";
 import bg from "../../public/images/blurb.jpg";
 import Image from "next/image";
 
-export const OgImage: NextPage = () => {
-  const { query } = useRouter();
-  const imageConfig = getImageConfig(query.imageConfig);
+export const OgImage: NextPage<{
+  imageConfig: string | string[] | undefined;
+}> = (props) => {
+  const imageConfig = getImageConfig(props.imageConfig);
   return (
     <div style={{ height: "100vh" }} className="relative w-full bg-custom1">
       <div className="relative h-full">
@@ -31,4 +31,12 @@ export const OgImage: NextPage = () => {
       </div>
     </div>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+  return {
+    props: {
+      imageConfig: query.imageConfig,
+    },
+  };
 };
