@@ -15,7 +15,11 @@ export const Hero: React.FC = () => {
         </div>
         <div className="absolute left-0 right-0 z-10 mx-auto max-w-xs flex justify-end">
           <div className="md:-mr-11 md:-mt-11 mr-6 -mt-10">
-            <img className="h-20 w-20 md:h-40 md:w-40" src={plogo.src} alt="" />
+            <img
+              className="h-[5.25rem] w-[5.25rem] md:h-40 md:w-40"
+              src={plogo.src}
+              alt=""
+            />
           </div>
         </div>
         <div className="flex justify-center gap-2 mb-4">
