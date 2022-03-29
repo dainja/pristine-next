@@ -1,3 +1,8 @@
+import Image from "next/image";
+import adnan from "../public/images/testimonials/adnan.jpg";
+import ardita from "../public/images/testimonials/ardita.jpg";
+import donna from "../public/images/testimonials/donna.jpg";
+
 const blogPosts = [
   {
     id: 1,
@@ -6,6 +11,7 @@ const blogPosts = [
     date: "Mar 10, 2020",
     datetime: "2020-03-10",
     category: { name: "FRISÖR", href: "#" },
+    image: ardita,
     imageUrl:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80",
     preview:
@@ -26,6 +32,7 @@ const blogPosts = [
     date: "Feb 12, 2020",
     datetime: "2020-02-12",
     category: { name: "BARBERARE", href: "#" },
+    image: adnan,
     imageUrl:
       "https://images.unsplash.com/photo-1536164261511-3a17e671d380?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80",
     preview:
@@ -45,6 +52,7 @@ const blogPosts = [
     date: "Mar 16, 2020",
     datetime: "2020-03-16",
     category: { name: "BEAUTY", href: "#" },
+    image: donna,
     imageUrl:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
     preview:
@@ -77,11 +85,17 @@ export const About: React.FC = () => {
               className="flex flex-col rounded-lg shadow-lg overflow-hidden"
             >
               <div className="flex-shrink-0">
-                <img
-                  className="h-96 w-full object-cover"
-                  src={post.imageUrl}
-                  alt=""
-                />
+                <div className="h-96 w-full relative">
+                  <Image
+                    objectFit="cover"
+                    layout="fill"
+                    src={post.image}
+                    placeholder="blur"
+                    alt=""
+                    width="600"
+                    height="600"
+                  />
+                </div>
               </div>
               <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                 <div className="flex-1">
@@ -99,29 +113,6 @@ export const About: React.FC = () => {
                     </p>
                   </a>
                 </div>
-                {/* <div className="mt-6 flex items-center">
-                    <div className="flex-shrink-0">
-                      <a href={post.author.href}>
-                        <img
-                          className="h-10 w-10 rounded-full"
-                          src={post.author.imageUrl}
-                          alt={post.author.name}
-                        />
-                      </a>
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-sm font-medium text-gray-900">
-                        <a href={post.author.href} className="hover:underline">
-                          {post.author.name}
-                        </a>
-                      </p>
-                      <div className="flex space-x-1 text-sm text-gray-500">
-                        <time dateTime={post.datetime}>{post.date}</time>
-                        <span aria-hidden="true">&middot;</span>
-                        <span>{post.readingLength} read</span>
-                      </div>
-                    </div>
-                  </div> */}
               </div>
             </div>
           ))}

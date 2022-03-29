@@ -1,11 +1,14 @@
+import Image from "next/image";
 import React, { useMemo } from "react";
+import adnan from "../public/images/testimonials/adnan.jpg";
+import ardita from "../public/images/testimonials/ardita.jpg";
+import donna from "../public/images/testimonials/donna.jpg";
 
 interface Testimonial {
   id: number;
   text: string;
   author: string;
-  staff: string;
-  image: string;
+  image: StaticImageData;
 }
 
 const testimonials: Testimonial[] = [
@@ -13,22 +16,19 @@ const testimonials: Testimonial[] = [
     id: 1,
     text: "Lyxig behandling med varma handdukar, rakning med kniv och superproffsig frisör/barberare! Rekommenderar Adnan varmt då han tar sig tid och ger en helhetsupplevelse där jag kände mig otroligt bortskämd!",
     author: "Anton Y.",
-    staff: "adnan",
-    image: "/images/adnan.png",
+    image: adnan,
   },
   {
     id: 2,
     text: "Kan inte bli bättre! Bra resultat OCH trevligt!! Dessutom fin lokal!",
     author: "Erika Z.",
-    staff: "adnan",
-    image: "/images/ardita.png",
+    image: ardita,
   },
   {
     id: 3,
     text: "Hos Pristine får man förutom en otrolig frisyr ett otroligt välkomnande och servicen är på topp från att man stiger in till att man lämnar frisörsalongen. Grymt nöjd!!",
     author: "Saha A.",
-    staff: "donna",
-    image: "/images/donna.png",
+    image: donna,
   },
 ];
 
@@ -44,11 +44,15 @@ export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
             className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
           />
           <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
-            <div className="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-[29rem]">
-              <img
-                className="object-cover lg:h-full lg:w-full"
+            <div className="relative aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-[29rem]">
+              <Image
+                objectFit="cover"
+                layout="fill"
                 src={testimonial.image}
+                placeholder="blur"
                 alt=""
+                width="600"
+                height="600"
               />
             </div>
           </div>

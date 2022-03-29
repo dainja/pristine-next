@@ -3,6 +3,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import plogoText from "../assets/pristine-text.svg";
 import Link from "next/link";
+import { Footer } from "./Footer";
 
 const navigation = [
   { name: "Om Pristine", href: "/#om-pristine" },
@@ -154,39 +155,7 @@ export const Layout: React.FC = ({ children }) => {
           </Transition>
         </Popover>
         <main className="mt-20">{children}</main>
-        <footer className="bg-gray-50" aria-labelledby="footer-heading">
-          <h2 id="footer-heading" className="sr-only">
-            Footer
-          </h2>
-          <div className="max-w-md mx-auto pt-12 px-4 sm:max-w-7xl sm:px-6 lg:pt-16 lg:px-8">
-            <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-              <div className="space-y-8 xl:col-span-1">
-                <img className="w-28" src={plogoText.src} alt="Company name" />
-                {/* <p className="text-gray-500 text-base">
-                  Salongen där vi strävar efter att ge en upplevelse utöver det
-                  vanliga.
-                </p> */}
-                <div className="flex space-x-6">
-                  {footerNavigation.social.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="text-gray-400 hover:text-gray-500"
-                    >
-                      <span className="sr-only">{item.name}</span>
-                      <item.icon className="h-6 w-6" aria-hidden="true" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 border-t border-gray-200 py-8">
-              <p className="text-base text-gray-400 xl:text-center">
-                &copy; 2022 Pristine. All rights reserved.
-              </p>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );

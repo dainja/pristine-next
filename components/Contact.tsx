@@ -1,16 +1,21 @@
-import type { NextPage } from "next";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
 
-import map from "../assets/img/map.png";
+import map from "../public/images/map.png";
+import Image from "next/image";
 
 export const Contact: React.FC = () => {
   return (
     <div className="relative bg-custom2" id="kontakt">
-      <div className="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-        <img
-          className="w-full h-full  lg:object-none xl:object-cover object-none bg-custom2"
-          src={map.src}
+      <div className="relative h-56 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+        <Image
+          objectFit="cover"
+          layout="fill"
+          src={map}
+          placeholder="blur"
           alt=""
+          width="761"
+          height="825"
+          className="lg:object-none xl:object-cover object-none "
         />
       </div>
       <div className="relative mx-auto max-w-md px-4 py-6 sm:max-w-7xl sm:px-6 sm:py-10 md:py-12 lg:px-8 lg:py-16">
