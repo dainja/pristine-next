@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <NextSeo description="Luta dig tillbaka och koppla av i vår antika läderstol medan vi klipper, stylar, rakar och trimmar ditt skägg eller hår. Pristine Barbershop är inte en vanliga frisörsalong, det är också en plats för social interaktion och allmän diskussion. Pristine i Växjö, en frisörsalong där alla är välkomna." />
+      <NextSeo description="Hos oss hittar du den perfekta balansen mellan en kunnig och erfaren frisör, barberare och en makeupartist med ett brett utbud. Vi erbjuder alltså en härlig kombination av kompetens och en bekväm samt avslappnad stämning som utgör grunden för salong Pristine." />
 
       <Hero />
       <Blurb />
