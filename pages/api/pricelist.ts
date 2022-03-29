@@ -46,6 +46,5 @@ export default async function handler(
         group.services.push(service);
       });
   });
-  res.setHeader("Cache-Control", "s-maxage=600, stale-while-revalidate=86400");
   res.status(200).json({ groups: groups });
 }

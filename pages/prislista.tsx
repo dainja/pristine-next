@@ -67,12 +67,16 @@ const Home: NextPage<Props> = ({ groups }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async ({
+  res,
+}) => {
   const baseUrl = process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
     : "http://localhost:3000";
-  const res = await fetch(`${baseUrl}/api/pricelist`);
-  const props = await res.json();
+  const response = await fetch(`${baseUrl}/api/pricelist`);
+  const props = await response.json();
+
+  res.setHeader("Cache-Control", "s-maxage=600, stale-while-revalidate=86400");
   return {
     props,
   };
