@@ -12,7 +12,7 @@ const Home: NextPage<Props> = ({ groups }) => {
     <div className="relative bg-custom1 py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
         <NextSeo title="Prislista" />
-        <h1 className="mt-24 text-3xl sm:text-4xl text-center text-gray-900 tracking-tight font-aurora">
+        <h1 className="text-3xl sm:text-4xl text-center text-gray-900 tracking-tight font-aurora">
           Prislista
         </h1>
         <div className="overflow-hidden sm:rounded-md">
