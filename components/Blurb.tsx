@@ -11,10 +11,9 @@ export const Blurb: React.FC = () => {
             Salong Pristine
           </p>
           <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-            Hos oss hittar du den perfekta balansen mellan en kunnig och erfaren
-            frisör, barberare och en makeupartist med ett brett utbud. Vi
-            erbjuder alltså en härlig kombination av kompetens och en bekväm
-            samt avslappnad stämning som utgör grunden för salong Pristine.
+            <p className="italic">adjective</p>
+            <p>[pris·tine || 'prɪstɪːn]</p>
+            <p>gammaldags; ofördärvad; ren; oförändrad</p>
           </p>
         </div>
         <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80 relative">
