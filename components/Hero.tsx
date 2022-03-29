@@ -1,5 +1,8 @@
 import Image from "next/image";
 import plogo from "../assets/plogo-svg.svg";
+import hero1 from "../public/images/hero/1.jpg";
+import hero2 from "../public/images/hero/2.jpg";
+import hero3 from "../public/images/hero/3.jpg";
 
 export const Hero: React.FC = () => {
   return (
@@ -20,10 +23,11 @@ export const Hero: React.FC = () => {
             <div className="w-4/5 md:w-full h-full relative">
               <Image
                 alt=""
-                src="/images/hero/2.jpg"
+                src={hero2}
                 sizes="33vw"
                 layout="fill"
-                className="object-cover"
+                objectFit="cover"
+                placeholder="blur"
                 priority
               />
             </div>
@@ -32,10 +36,11 @@ export const Hero: React.FC = () => {
             <div className="w-full h-full relative">
               <Image
                 alt=""
-                src="/images/hero/3.jpg"
+                src={hero3}
                 sizes="33vw"
                 layout="fill"
-                className="object-cover"
+                objectFit="cover"
+                placeholder="blur"
                 priority
               />
             </div>
@@ -44,10 +49,11 @@ export const Hero: React.FC = () => {
             <div className="w-4/5 md:w-full h-full relative">
               <Image
                 alt=""
-                src="/images/hero/1.jpg"
+                src={hero1}
                 sizes="33vw"
                 layout="fill"
-                className="object-cover"
+                objectFit="cover"
+                placeholder="blur"
                 priority
               />
             </div>
