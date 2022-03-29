@@ -2,7 +2,6 @@ import { GetServerSideProps, NextPage } from "next";
 import { getImageConfig } from "./";
 import plogoText from "../../assets/pristine-text.svg";
 import bg from "../../public/images/blurb.jpg";
-import Image from "next/image";
 
 export const OgImage: NextPage<{
   imageConfig: string | string[] | undefined;
@@ -11,7 +10,11 @@ export const OgImage: NextPage<{
   return (
     <div style={{ height: "100vh" }} className="relative w-full bg-custom1">
       <div className="relative h-full">
-        <Image src={bg} layout="fill" alt="" className="opacity-75 blur-sm" />
+        <img
+          src={bg.src}
+          alt=""
+          className="opacity-75 blur-sm w-full h-full object-cover"
+        />
       </div>
       {imageConfig.id !== "start" ? (
         <div className="absolute top-0 left-0 right-0 bottom-0">
@@ -22,11 +25,11 @@ export const OgImage: NextPage<{
           </div>
         </div>
       ) : undefined}
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className="absolute bottom-0 left-0 right-0 text-center">
         {imageConfig.id === "start" ? (
-          <img className="w-8/12 p-10 color-white" src={plogoText.src} alt="" />
+          <img className="w-8/12 p-10" src={plogoText.src} alt="" />
         ) : (
-          <img className="w-4/12 p-10 color-white" src={plogoText.src} alt="" />
+          <img className="w-4/12 p-10" src={plogoText.src} alt="" />
         )}
       </div>
     </div>
