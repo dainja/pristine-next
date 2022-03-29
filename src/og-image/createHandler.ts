@@ -26,7 +26,13 @@ async function getImage(
 }
 
 function getBaseUrl() {
-  return "http://localhost:3000";
+  if (process.env.OG_IMAGE_BASE_URL) {
+    return process.env.OG_IMAGE_BASE_URL;
+  }
+
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
 }
 
 type Data = {
