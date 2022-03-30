@@ -11,19 +11,13 @@ interface Service {
 export interface Group {
   name: string;
   services: Service[];
+  source: string;
 }
 
-interface Data {
-  groups: Group[];
-}
+const urls = ["pristine-40594", "beautybyardita-46262"];
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  const request = await fetch(
-    "https://www.bokadirekt.se/places/pristine-40594"
-  );
+async function getGroups(url: string): Promise<Group[]> {
+  const request = await fetch("https://www.bokadirekt.se/places/" + url);
   const text = await request.text();
   const $ = cheerio.load(text);
 
@@ -32,6 +26,7 @@ export default async function handler(
     const group: Group = {
       name: $(element).find("h3").text(),
       services: [],
+      source: url,
     };
     groups.push(group);
     $(element)
@@ -46,5 +41,18 @@ export default async function handler(
         group.services.push(service);
       });
   });
-  res.status(200).json({ groups: groups });
+  return groups;
+}
+
+interface Data {
+  groups: Group[];
+}
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
+  const arrayOfGroups = await Promise.all(urls.map(getGroups));
+
+  res.status(200).json({ groups: arrayOfGroups.flat() });
 }
