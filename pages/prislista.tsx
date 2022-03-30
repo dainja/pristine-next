@@ -41,31 +41,27 @@ const Home: NextPage<Props> = ({ groups }) => {
                         href={`https://www.bokadirekt.se${
                           service.link ?? "/places/pristine-40594"
                         }`}
-                        className="block hover:bg-gray-200"
+                        className="hover:bg-gray-200 flex items-center justify-between"
                         rel="noreferrer"
                       >
                         <div className="px-4 py-4 sm:px-6">
-                          <div className="flex items-center justify-between">
+                          <div>
                             <p className="text-sm font-medium text-custom2 text-left ">
                               {service.name}
                             </p>
-                            <div className="ml-2 flex-shrink-0">
-                              <button className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-custom2 hover:bg-gray-700 mr-2">
-                                Boka
-                                <ExternalLinkIcon
-                                  className="-mr-1 ml-3 h-5 w-5 text-white"
-                                  aria-hidden="true"
-                                />
-                              </button>
-                            </div>
+                            <p className="flex items-center text-sm text-gray-500 text-left">
+                              {service.duration}
+                            </p>
                           </div>
-                          <div className="mt-2 sm:flex sm:justify-between">
-                            <div className="sm:flex">
-                              <p className="flex items-center text-sm text-gray-500">
-                                {service.duration}
-                              </p>
-                            </div>
-                          </div>
+                        </div>
+                        <div className="ml-2 flex-shrink-0">
+                          <button className="inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-md text-white bg-custom2 hover:bg-gray-700 mr-2">
+                            Boka
+                            <ExternalLinkIcon
+                              className="-mr-1 ml-3 h-5 w-5 text-white"
+                              aria-hidden="true"
+                            />
+                          </button>
                         </div>
                       </a>
                     </li>
