@@ -8,11 +8,16 @@ import { Services } from "../components/Services";
 import { Contact } from "../components/Contact";
 import { Blurb } from "../components/Blurb";
 import { NextSeo } from "next-seo";
+import { structuredData } from "../src/structuredData";
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <NextSeo
