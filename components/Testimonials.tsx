@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React, { useMemo } from "react";
-import adnan from "../public/images/testimonials/adnan.jpg";
-import ardita from "../public/images/testimonials/ardita.jpg";
-import donna from "../public/images/testimonials/donna.jpg";
+import adnan from "../public/images/testimonials/in-action-bw.jpg";
+import ardita from "../public/images/testimonials/ardita-testimonial.jpg";
+import donna from "../public/images/testimonials/3.jpg";
 
 interface Testimonial {
   id: number;

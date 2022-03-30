@@ -1,7 +1,7 @@
 import Image from "next/image";
 import plogo from "../assets/plogo-svg.svg";
-import hero1 from "../public/images/hero/1.jpg";
-import hero2 from "../public/images/hero/2.jpg";
+import hero1 from "../public/images/hero/barber-color.jpg";
+import hero2 from "../public/images/hero/makeup.jpg";
 import hero3 from "../public/images/hero/3.jpg";
 
 export const Hero: React.FC = () => {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import blurb from "../public/images/blurb.jpg";
+import blurb from "../public/images/salon.jpg";
 
 export const Blurb: React.FC = () => {
   return (
@@ -16,15 +16,17 @@ export const Blurb: React.FC = () => {
             <p>gammaldags; ofördärvad; ren; oförändrad</p>
           </p>
         </div>
-        <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80 relative">
-          <Image
-            alt=""
-            src={blurb}
-            layout="responsive"
-            objectFit="cover"
-            placeholder="blur"
-            className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
-          />
+        <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80 relative overflow-hidden">
+          <div className="lg:-top-48 relative">
+            <Image
+              alt=""
+              src={blurb}
+              layout="responsive"
+              objectFit="cover"
+              placeholder="blur"
+              className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 "
+            />
+          </div>
         </div>
       </div>
     </div>

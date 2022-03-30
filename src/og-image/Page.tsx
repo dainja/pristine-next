@@ -1,7 +1,7 @@
 import { GetServerSideProps, NextPage } from "next";
 import { getImageConfig } from "./";
 import plogoText from "../../assets/pristine-text.svg";
-import bg from "../../public/images/blurb.jpg";
+import bg from "../../public/images/salon.jpg";
 
 export const OgImage: NextPage<{
   imageConfig: string | string[] | undefined;
