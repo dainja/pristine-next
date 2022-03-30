@@ -1,7 +1,7 @@
-import { GetServerSideProps, NextPage } from "next";
+import { GetServerSideProps, GetStaticProps, NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
-import { Group } from "./api/pricelist";
+import { fetchPricelistGroups, Group } from "../src/pricelist";
 import { Fragment } from "react";
 
 const Information: React.FC<{ text: string }> = ({ text }) => (
@@ -86,18 +86,14 @@ const Home: NextPage<Props> = ({ groups }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps<Props> = async ({
-  res,
-}) => {
-  const baseUrl = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000";
-  const response = await fetch(`${baseUrl}/api/pricelist`);
-  const props = await response.json();
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const groups = await fetchPricelistGroups();
 
-  res.setHeader("Cache-Control", "s-maxage=600, stale-while-revalidate");
   return {
-    props,
+    props: {
+      groups,
+    },
+    revalidate: 600,
   };
 };
 

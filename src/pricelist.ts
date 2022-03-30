@@ -1,4 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from "next";
 import * as cheerio from "cheerio";
 
 interface Service {
@@ -44,15 +43,7 @@ async function getGroups(url: string): Promise<Group[]> {
   return groups;
 }
 
-interface Data {
-  groups: Group[];
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
+export const fetchPricelistGroups = async (): Promise<Group[]> => {
   const arrayOfGroups = await Promise.all(urls.map(getGroups));
-
-  res.status(200).json({ groups: arrayOfGroups.flat() });
-}
+  return arrayOfGroups.flat();
+};

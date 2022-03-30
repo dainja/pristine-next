@@ -6,7 +6,5 @@ jobs:
   cron:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger pricelist generation
-        run: curl -s -o /dev/null -D - https://www.pristinevxo.se/prislista
       - name: Trigger og-images generation
         run: https://www.pristinevxo.se/api/og-image/start.png && https://www.pristinevxo.se/api/og-image/pricelist.png
