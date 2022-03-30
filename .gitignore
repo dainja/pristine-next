@@ -42,3 +42,8 @@ yarn-error.log*
 lhreport.html
 
 todo.txt
+
+# next-sitemap
+public/sitemap-*
+public/sitemap.xml
+public/robots.txt
