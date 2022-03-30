@@ -3,6 +3,19 @@ import { NextSeo } from "next-seo";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
 import { Group } from "./api/pricelist";
 
+const Information: React.FC<{ text: string }> = ({ text }) => (
+  <p className="flex items-center text-sm text-gray-500 text-left">
+    {text.split(", ").map((value, index, array) => (
+      <>
+        <span key={index} className="whitespace-nowrap">
+          {value}
+        </span>
+        {index + 1 < array.length ? <span>,&nbsp;</span> : null}
+      </>
+    ))}
+  </p>
+);
+
 interface Props {
   groups: Group[];
 }
@@ -49,9 +62,7 @@ const Home: NextPage<Props> = ({ groups }) => {
                             <p className="text-sm font-medium text-custom2 text-left ">
                               {service.name}
                             </p>
-                            <p className="flex items-center text-sm text-gray-500 text-left">
-                              {service.duration}
-                            </p>
+                            <Information text={service.duration} />
                           </div>
                         </div>
                         <div className="ml-2 flex-shrink-0">
