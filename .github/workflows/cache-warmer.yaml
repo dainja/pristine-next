@@ -7,6 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger pricelist generation
-        run: |
-          curl --request GET \
-          --url 'https://www.pristinevxo.se/prislista'
+        run: curl -s -o /dev/null -D - https://www.pristinevxo.se/prislista
