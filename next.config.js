@@ -6,6 +6,10 @@ const nextConfig = {
     formats: ["image/avif", "image/webp"],
   },
   poweredByHeader: false,
+  i18n: {
+    locales: ["sv"],
+    defaultLocale: "sv",
+  },
 };
 
 module.exports = nextConfig;
