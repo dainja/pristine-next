@@ -31,11 +31,11 @@ const Home: NextPage<Props> = ({ groups }) => {
             <ul role="list" className="mb-12">
               {groups.map((group, index) => (
                 <div key={index}>
-                  <h2 className="mt-12 ml-6 text-2xl sm:text-3xl text-left text-gray-900 tracking-tight font-aurora">
+                  <h2 className="mt-12 mb-3 ml-6 text-2xl sm:text-3xl text-left text-gray-900 tracking-tight font-aurora">
                     {group.name}
                   </h2>
                   {group.services.map((service, index) => (
-                    <li key={index} className="odd:bg-custom odd:rounded-xl">
+                    <li key={index} className="even:bg-custom even:rounded-xl">
                       <a
                         target="_blank"
                         href={`https://www.bokadirekt.se${
