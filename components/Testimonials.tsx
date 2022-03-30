@@ -20,7 +20,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    text: "Kan inte bli bättre! Bra resultat OCH trevligt!! Dessutom fin lokal!",
+    text: "Underbar service och underbar människa! Detta rekommenderar jag mina vänner!! Tack!!!",
     author: "Erika Z.",
     image: ardita,
   },
