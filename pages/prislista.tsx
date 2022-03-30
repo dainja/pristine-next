@@ -89,7 +89,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   const response = await fetch(`${baseUrl}/api/pricelist`);
   const props = await response.json();
 
-  res.setHeader("Cache-Control", "s-maxage=600, stale-while-revalidate=86400");
+  res.setHeader("Cache-Control", "s-maxage=600, stale-while-revalidate");
   return {
     props,
   };

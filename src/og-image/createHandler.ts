@@ -58,10 +58,7 @@ export function createOgImageHandler() {
       res.statusCode = 200;
       res.setHeader("Content-Type", "image/png");
 
-      res.setHeader(
-        "Cache-Control",
-        "s-maxage=600, stale-while-revalidate=86400"
-      );
+      res.setHeader("Cache-Control", "s-maxage=600, stale-while-revalidate");
 
       res.end(image);
     } catch (error) {
