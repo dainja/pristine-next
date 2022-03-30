@@ -2,16 +2,15 @@ import { GetServerSideProps, NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
 import { Group } from "./api/pricelist";
+import { Fragment } from "react";
 
 const Information: React.FC<{ text: string }> = ({ text }) => (
   <p className="flex items-center text-sm text-gray-500 text-left">
     {text.split(", ").map((value, index, array) => (
-      <>
-        <span key={index} className="whitespace-nowrap">
-          {value}
-        </span>
+      <Fragment key={index}>
+        <span className="whitespace-nowrap">{value}</span>
         {index + 1 < array.length ? <span>,&nbsp;</span> : null}
-      </>
+      </Fragment>
     ))}
   </p>
 );
