@@ -11,22 +11,20 @@ export const Contact: React.FC = () => {
           objectFit="cover"
           layout="fill"
           src={map}
-          // placeholder="blur"
           alt=""
           className="lg:object-none xl:object-cover object-none scale-150 sm:transform-none"
         />
       </div>
       <div className="relative mx-auto max-w-md px-4 py-6 sm:max-w-7xl sm:px-6 sm:py-10 md:py-12 lg:px-8 lg:py-16">
         <div className="md:ml-auto md:w-1/2 md:pl-10">
-          <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300"></h2>
-          <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl font-aurora">
+          <h2 className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl font-aurora">
             Välkommen in till oss
-          </p>
+          </h2>
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-10">
             <div>
-              <h2 className="italic text-base font-semibold tracking-wider text-red-300 ">
+              <h3 className="italic text-base font-semibold tracking-wider text-red-300 ">
                 Adress
-              </h2>
+              </h3>
               <div className="mt-2 text-white">
                 <p>
                   Pristine
@@ -38,9 +36,9 @@ export const Contact: React.FC = () => {
               </div>
             </div>
             <div className="lg:max-w-[14rem] max-w-[14rem]">
-              <h2 className="italic text-base font-semibold tracking-wider text-red-300 ">
+              <h3 className="italic text-base font-semibold tracking-wider text-red-300 ">
                 Öppettider
-              </h2>
+              </h3>
               <div className="mt-2 text-white">
                 <div>
                   <div className="flex justify-between">
@@ -53,9 +51,9 @@ export const Contact: React.FC = () => {
               </div>
             </div>
             <div>
-              <h2 className="italic text-base font-semibold tracking-wider text-red-300 ">
+              <h3 className="italic text-base font-semibold tracking-wider text-red-300 ">
                 Betalning
-              </h2>
+              </h3>
               <div className="mt-2 text-white">
                 <p>
                   Tänk på att vi inte tar emot kontanter vid betalning i vår
@@ -64,9 +62,9 @@ export const Contact: React.FC = () => {
               </div>
             </div>
             <div>
-              <h2 className="italic text-base font-semibold tracking-wider text-red-300 ">
+              <h3 className="italic text-base font-semibold tracking-wider text-red-300 ">
                 Debitering
-              </h2>
+              </h3>
               <div className="mt-2 text-white">
                 <p>
                   Avbokning av behandling ska ske senast 24 timmar före bokad
