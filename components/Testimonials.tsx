@@ -1,8 +1,9 @@
+import { StarIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import React, { useMemo } from "react";
-import adnan from "../public/images/testimonials/in-action-bw.jpg";
+import adnan from "../public/images/testimonials/adnan-testimonial.jpg";
 import ardita from "../public/images/testimonials/ardita-testimonial.jpg";
-import donna from "../public/images/testimonials/3.jpg";
+import donna from "../public/images/testimonials/donna-testimonial.jpg";
 
 interface Testimonial {
   id: number;
@@ -68,16 +69,53 @@ export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
                 >
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                 </svg>
-                <p className="mt-6 text-2xl font-medium text-white">
+                <p className="mt-6 text-xl md:text-2xl font-medium text-white">
                   {testimonial.text}
                 </p>
               </div>
+
               <footer className="mt-6">
-                <p className="text-base font-medium text-white">
+                <p className="text-base font-medium text-white italic">
                   {testimonial.author}
                 </p>
                 <p className="text-base font-medium text-cyan-100"></p>
               </footer>
+              <div className="inline-flex items-center divide-x divide-gray-300">
+                <div className="flex-shrink-0 flex pr-5">
+                  <StarIcon
+                    className="h-5 w-5 text-yellow-400"
+                    aria-hidden="true"
+                  />
+                  <StarIcon
+                    className="h-5 w-5 text-yellow-400"
+                    aria-hidden="true"
+                  />
+                  <StarIcon
+                    className="h-5 w-5 text-yellow-400"
+                    aria-hidden="true"
+                  />
+                  <StarIcon
+                    className="h-5 w-5 text-yellow-400"
+                    aria-hidden="true"
+                  />
+                  <StarIcon
+                    className="h-5 w-5 text-yellow-400"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="min-w-0 flex-1 pl-5 py-1 text-sm text-gray-300 sm:py-3">
+                  <span className="font-medium text-white">5 stjärnor </span>
+                  från över{" "}
+                  <a
+                    href="https://www.bokadirekt.se/places/pristine-40594"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium text-red-300"
+                  >
+                    250 recensioner på bokadirekt.se
+                  </a>
+                </div>
+              </div>
             </blockquote>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import makeup1 from "../public/images/services/make-up1.png";
+import makeup from "../public/images/services/make-up.png";
 import barber from "../public/images/services/barber.png";
 import hair from "../public/images/services/hair.png";
 import Image from "next/image";
@@ -17,7 +17,7 @@ const services = [
   {
     title: "Beauty",
     text: "Ögonbryn och fransbehandlingar. Makeupkurser och makeup inför festligheter",
-    image: makeup1,
+    image: makeup,
   },
 ];
 
