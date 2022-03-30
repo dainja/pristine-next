@@ -35,7 +35,7 @@ const Home: NextPage<Props> = ({ groups }) => {
                     {group.name}
                   </h2>
                   {group.services.map((service, index) => (
-                    <li key={index}>
+                    <li key={index} className="odd:bg-custom odd:rounded-xl">
                       <a
                         target="_blank"
                         href={`https://www.bokadirekt.se${
@@ -46,14 +46,14 @@ const Home: NextPage<Props> = ({ groups }) => {
                       >
                         <div className="px-4 py-4 sm:px-6">
                           <div className="flex items-center justify-between">
-                            <p className="text-sm font-medium text-green-600 truncate">
+                            <p className="text-sm font-medium text-custom2 text-left ">
                               {service.name}
                             </p>
                             <div className="ml-2 flex-shrink-0">
-                              <button className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-green-600 hover:bg-gray-50  mr-2">
+                              <button className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-custom2 hover:bg-gray-700 mr-2">
                                 Boka
                                 <ExternalLinkIcon
-                                  className="-mr-1 ml-3 h-5 w-5 text-gray-900"
+                                  className="-mr-1 ml-3 h-5 w-5 text-white"
                                   aria-hidden="true"
                                 />
                               </button>

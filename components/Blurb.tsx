@@ -12,7 +12,7 @@ export const Blurb: React.FC = () => {
           </p>
           <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
             <p className="italic">adjective</p>
-            <p>[pris·tine || 'prɪstɪːn]</p>
+            <p>[pris·tine || &apos;prɪstɪːn]</p>
             <p>gammaldags; ofördärvad; ren; oförändrad</p>
           </p>
         </div>
