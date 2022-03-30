@@ -1,6 +1,6 @@
 import { ExternalLinkIcon } from "@heroicons/react/solid";
 
-import map from "../public/images/map.png";
+import map from "../public/images/map.svg";
 import Image from "next/image";
 
 export const Contact: React.FC = () => {
@@ -11,7 +11,7 @@ export const Contact: React.FC = () => {
           objectFit="cover"
           layout="fill"
           src={map}
-          placeholder="blur"
+          // placeholder="blur"
           alt=""
           className="lg:object-none xl:object-cover object-none scale-150 sm:transform-none"
         />
