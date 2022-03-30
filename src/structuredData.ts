@@ -1,4 +1,5 @@
 // https://schema.org/HairSalon
+// Use https://search.google.com/test/rich-results to test validity
 export const structuredData = {
   "@context": "https://schema.org",
   "@type": "HairSalon",
@@ -22,7 +23,10 @@ export const structuredData = {
   },
   url: "http://www.pristinevxo.se",
   telephone: "+4647016120",
+  slogan: "gammaldags; ofördärvad; ren; oförändrad",
   priceRange: "$$",
+  currenciesAccepted: "SEK",
+  paymentAccepted: "Debit Card, Credit Card",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
