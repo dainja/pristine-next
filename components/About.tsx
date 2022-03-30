@@ -9,6 +9,8 @@ interface Staff {
   role: string;
   image: StaticImageData;
   about: string;
+  about2: string;
+  about3: string | null;
 }
 
 const staff: Staff[] = [
@@ -18,7 +20,9 @@ const staff: Staff[] = [
     role: "FRISÖR",
     image: donna,
     about:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
+      "Arbetat som frisör i 7 år. Frisöryrket har varit min dröm så länge jag kan minnas och jag är utbildad inom färg, klippning och hairtalk.",
+    about2: "Älskar att jobba med ljusa hår och skapa färgförändringar.",
+    about3: "Olaplex.",
   },
 
   {
@@ -27,7 +31,11 @@ const staff: Staff[] = [
     role: "BARBERARE",
     image: adnan,
     about:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
+      "Utbildad barberare för både hår och skägg där jag uppfyller dina önskemål med sax, maskin och rakkniv.",
+    about2:
+      "Fade eller skinfade är en favorit hos mig. Men jag jobbar med alla olika frisyrer och hårtyper. Favoritprodukt: Uppercut är en fantastisk produkt och den jag har alltid jobbat med.",
+    about3:
+      "Uppercut är en fantastisk produkt och den jag har alltid jobbat med.",
   },
   {
     id: 3,
@@ -35,7 +43,10 @@ const staff: Staff[] = [
     role: "BEAUTY",
     image: ardita,
     about:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+      "Arbetat som Makeupartist i snart 13 år. Makeup & skönhetsyrket har alltid varit en dröm sedan barndomen eftersom jag brinner för de konstnärliga. Jag har utbildningar inom både makeup och för olika sminkmärken, samt inom skönhet/teater och film. Jag har även utbildning inom olika ögonbrynstekniker såsom tatuering, form och färg samt lashlift.",
+    about2:
+      "Jag kan inte bestämma mig för något särskilt, älskar att skapa allt som ligger inom min profession! ",
+    about3: null,
   },
 ];
 
@@ -75,9 +86,19 @@ export const About: React.FC = () => {
                     <p className="text-2xl font-semibold text-gray-900 font-aurora">
                       {member.name}
                     </p>
-                    <p className="mt-3 text-base text-gray-500">
-                      {member.about}
-                    </p>
+                    <div className="mt-3 text-base text-gray-500">
+                      <h5 className="font-bold">Vem är {member.name}?</h5>
+                      <p> {member.about}</p>
+                      <br />
+                      <h5 className="font-bold">Skapar?</h5>
+                      <p>{member.about2}</p>
+                      <br />
+                      {member.about3 ? (
+                        <h5 className="font-bold">Favoritprodukt</h5>
+                      ) : null}
+
+                      <p>{member.about3}</p>
+                    </div>
                   </p>
                 </div>
               </div>

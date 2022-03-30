@@ -9,11 +9,41 @@ export const Blurb: React.FC = () => {
           <h1 className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl font-aurora">
             Salong Pristine
           </h1>
-          <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
+          <div className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
             <p className="italic">adjective</p>
             <p>[pris·tine || &apos;prɪstɪːn]</p>
             <p>gammaldags; ofördärvad; ren; oförändrad</p>
-          </p>
+          </div>
+          <br />
+          <div className="relative flex py-5 items-center">
+            <div className="flex-grow border-t border-gray-400"></div>
+            <span className="flex-shrink mx-4 text-gray-400">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
+            </span>
+            <div className="flex-grow border-t border-gray-400"></div>
+          </div>
+          <div className="mt-2 max-w-prose mx-auto text-xl text-gray-500">
+            <p>
+              Vi anser att ett besök hos oss ska vara härligt, inspirerande och
+              anpassat för just dig. Vi erbjuder hårfrisering, barber tjänster,
+              bryn, fransar och skönhet som gör dig till din bästa version.
+              Genom att alltid utbilda, uppdatera oss och brinna för det vi gör
+              kan vi ge dig det där lilla extra.
+            </p>
+          </div>
         </div>
         <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80 relative overflow-hidden">
           <div className="lg:-top-48 relative">

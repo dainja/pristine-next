@@ -6,17 +6,17 @@ import Image from "next/image";
 const services = [
   {
     title: "Frisör",
-    text: "Varmt välkommen till vår frisördel. Vi erbjuder ett komplett utbud av professionella frisörbehandlingar.",
+    text: "Klippning, styling, hairtalk.",
     image: hair,
   },
   {
     title: "Barberare",
-    text: "Luta dig tillbaka och koppla av i vår antika läderstol medan vi klipper, stylar, rakar och trimmar ditt skägg eller hår.",
+    text: "Barbertjänster. Herrklippning och rakning.",
     image: barber,
   },
   {
     title: "Beauty",
-    text: "Ta hand om dina naglar. Låt någon av våra nagelterapeuter ge dig en professionell manikyr som ger dig starka och snygga naglar och nagelband.",
+    text: "Ögonbryn och fransbehandlingar. Makeupkurser och makeup inför festligheter",
     image: makeup1,
   },
 ];
@@ -32,7 +32,7 @@ export const Services: React.FC = () => {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <div key={service.title} className="pt-6">
-                <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8 ">
                   <div className="-mt-6">
                     <div>
                       <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-teal-700 rounded-md shadow-lg">
