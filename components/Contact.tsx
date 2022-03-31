@@ -76,7 +76,9 @@ export const Contact: React.FC = () => {
           <div className="mt-8">
             <div className="inline-flex rounded-md shadow justify-between">
               <a
-                href="#"
+                href="https://www.bokadirekt.se/places/pristine-40594"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50  mr-2"
               >
                 Boka tid
