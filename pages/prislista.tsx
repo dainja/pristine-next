@@ -51,7 +51,7 @@ const Home: NextPage<Props> = ({ groups }) => {
                       <a
                         target="_blank"
                         href={`https://www.bokadirekt.se${
-                          service.link ?? "/places/pristine-40594"
+                          service.link ?? `/places/${group.source}`
                         }`}
                         className="hover:bg-gray-200 flex items-center justify-between"
                         rel="noreferrer"
