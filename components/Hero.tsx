@@ -22,8 +22,8 @@ export const Hero: React.FC = () => {
             />
           </div>
         </div>
-        <div className="flex justify-center gap-2 mb-4">
-          <div className="flex-1 md:mt-32 mt-20 h-[24rem] md:h-[38rem] flex justify-end">
+        <div className="flex justify-center gap-2 pb-4">
+          <div className="basis-2/5 md:flex-1 md:mt-32 mt-20 h-[24rem] md:h-[38rem] flex justify-end">
             <div className="w-4/5 md:w-full h-full relative">
               <Image
                 alt=""
@@ -36,7 +36,7 @@ export const Hero: React.FC = () => {
               />
             </div>
           </div>
-          <div className="flex-1 h-[24rem] md:h-[38rem] mt-32 md:mt-60">
+          <div className="basis-1/3 md:flex-1 h-[24rem] md:h-[38rem] mt-32 md:mt-60">
             <div className="w-full h-full relative">
               <Image
                 alt=""
@@ -49,7 +49,7 @@ export const Hero: React.FC = () => {
               />
             </div>
           </div>
-          <div className="flex-1 h-[24rem] md:h-[38rem] mt-24 md:mt-40">
+          <div className="basis-2/5 md:flex-1 h-[24rem] md:h-[38rem] mt-24 md:mt-40">
             <div className="w-4/5 md:w-full h-full relative">
               <Image
                 alt=""
