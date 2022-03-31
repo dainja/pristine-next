@@ -31,6 +31,9 @@ const Home: NextPage = () => {
             },
           ],
         }}
+        twitter={{
+          cardType: "summary_large_image",
+        }}
         description="Hos oss hittar du den perfekta balansen mellan en kunnig och erfaren frisör, barberare och en makeupartist med ett brett utbud. Vi erbjuder alltså en härlig kombination av kompetens och en bekväm samt avslappnad stämning som utgör grunden för salong Pristine."
       />
 
