@@ -24,6 +24,7 @@ const Home: NextPage<Props> = ({ groups }) => {
     <>
       <NextSeo
         openGraph={{
+          url: "https://www.pristinevxo.se/prislista",
           images: [
             {
               url: "/api/og-image/pricelist.png",

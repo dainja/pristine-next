@@ -22,6 +22,7 @@ const Home: NextPage = () => {
       </Head>
       <NextSeo
         openGraph={{
+          url: "https://www.pristinevxo.se",
           images: [
             {
               url: "/api/og-image/start.png",

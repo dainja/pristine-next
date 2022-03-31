@@ -17,7 +17,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         openGraph={{
           type: "website",
           locale: "sv_SE",
-          url: "https://www.pristinevxo.se/",
           site_name: "Pristine",
         }}
       />
