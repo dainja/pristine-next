@@ -10,12 +10,13 @@ import { Blurb } from "../components/Blurb";
 import { NextSeo } from "next-seo";
 import { structuredData } from "../src/structuredData";
 import { getInstagramFeed, Post } from "../src/instagram";
+import { Instagram } from "../components/Instagram";
 
 interface Props {
   posts: Post[];
 }
 
-const Home: NextPage<Props> = () => {
+const Home: NextPage<Props> = ({ posts }) => {
   return (
     <>
       <Head>
@@ -54,6 +55,7 @@ const Home: NextPage<Props> = () => {
       <section id="kontakt" className="pt-12 -mt-12">
         <Contact />
       </section>
+      <Instagram posts={posts} />
     </>
   );
 };
