@@ -2,6 +2,9 @@ import Image from "next/image";
 import { Post } from "../src/instagram";
 
 export const Instagram: React.FC<{ posts: Post[] }> = ({ posts }) => {
+  if (posts.length === 0) {
+    return null;
+  }
   return (
     <div className="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
       <div className="relative">
