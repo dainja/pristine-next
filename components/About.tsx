@@ -33,7 +33,7 @@ const staff: Staff[] = [
     about:
       "Utbildad barberare för både hår och skägg där jag uppfyller dina önskemål med sax, maskin och rakkniv.",
     about2:
-      "Fade eller skinfade är en favorit hos mig. Men jag jobbar med alla olika frisyrer och hårtyper. Favoritprodukt: Uppercut är en fantastisk produkt och den jag har alltid jobbat med.",
+      "Fade eller skinfade är en favorit hos mig. Men jag jobbar med alla olika frisyrer och hårtyper.",
     about3:
       "Uppercut är en fantastisk produkt och den jag har alltid jobbat med.",
   },

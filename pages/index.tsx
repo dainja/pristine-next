@@ -34,7 +34,7 @@ const Home: NextPage = () => {
         twitter={{
           cardType: "summary_large_image",
         }}
-        description="Hos oss hittar du den perfekta balansen mellan en kunnig och erfaren frisör, barberare och en makeupartist med ett brett utbud. Vi erbjuder alltså en härlig kombination av kompetens och en bekväm samt avslappnad stämning som utgör grunden för salong Pristine."
+        description="Vi anser att ett besök hos oss ska vara härligt, inspirerande och anpassat för just dig. Vi erbjuder hårfrisering, barber tjänster, bryn, fransar och skönhet som gör dig till din bästa version. Genom att alltid utbilda, uppdatera oss och brinna för det vi gör kan vi ge dig det där lilla extra."
       />
 
       <Hero />

@@ -1,6 +1,6 @@
 import { StarIcon } from "@heroicons/react/solid";
 import Image from "next/image";
-import React, { useMemo } from "react";
+import React from "react";
 import adnan from "../public/images/testimonials/adnan-testimonial.jpg";
 import ardita from "../public/images/testimonials/ardita-testimonial.jpg";
 import donna from "../public/images/testimonials/donna-testimonial.jpg";
@@ -103,7 +103,7 @@ export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
                     aria-hidden="true"
                   />
                 </div>
-                <div className="min-w-0 flex-1 pl-5 py-1 text-sm text-gray-300 sm:py-3">
+                <div className="min-w-0 flex-1 pl-5 py-1 text-sm text-gray-400 sm:py-3">
                   <span className="font-medium text-white">5 stjärnor </span>
                   från över{" "}
                   <a
