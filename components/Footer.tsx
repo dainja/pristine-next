@@ -49,11 +49,6 @@ export const Footer: React.FC = () => {
             </a>
           ))}
         </div>
-        <div className="mt-8 md:mt-0 md:order-1">
-          <p className="text-center text-base text-gray-300">
-            &copy; 2022 Pristine, Inc. All rights reserved.
-          </p>
-        </div>
       </div>
     </footer>
   );
