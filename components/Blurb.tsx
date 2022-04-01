@@ -53,7 +53,7 @@ export const Blurb: React.FC = () => {
               layout="responsive"
               objectFit="cover"
               placeholder="blur"
-              className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
+              className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 grayscale"
             />
           </div>
         </div>
