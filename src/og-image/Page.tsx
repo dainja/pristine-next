@@ -1,7 +1,7 @@
 import { GetServerSideProps, NextPage } from "next";
 import { getImageConfig } from "./";
-import plogoText from "../../assets/pristine-text.svg";
 import bg from "../../public/images/salon.jpg";
+import { TextLogo } from "../../components/Logo";
 
 export const OgImage: NextPage<{
   imageConfig: string | string[] | undefined;
@@ -27,9 +27,9 @@ export const OgImage: NextPage<{
       ) : undefined}
       <div className="absolute bottom-0 left-0 right-0 text-center">
         {imageConfig.id === "start" ? (
-          <img className="w-8/12 p-10" src={plogoText.src} alt="" />
+          <TextLogo className="w-8/12 p-10" />
         ) : (
-          <img className="w-4/12 p-10" src={plogoText.src} alt="" />
+          <TextLogo className="w-4/12 p-10" />
         )}
       </div>
     </div>
