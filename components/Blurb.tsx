@@ -1,5 +1,5 @@
 import Image from "next/image";
-import blurb from "../public/images/salon.jpg";
+import blurb from "../public/images/blurb1.jpg";
 
 export const Blurb: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ export const Blurb: React.FC = () => {
           </h1>
           <div className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
             <p className="italic">adjective</p>
-            <p>[pris·tine || &apos;prɪstɪːn]</p>
+            <p>[ pris·tine || &apos;prɪstɪːn ]</p>
             <p>gammaldags; ofördärvad; ren; oförändrad</p>
           </div>
           <br />
@@ -46,14 +46,14 @@ export const Blurb: React.FC = () => {
           </div>
         </div>
         <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80 relative overflow-hidden">
-          <div className="lg:-top-48 relative">
+          <div className="lg:-top-16 relative">
             <Image
               alt=""
               src={blurb}
               layout="responsive"
               objectFit="cover"
               placeholder="blur"
-              className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 "
+              className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
             />
           </div>
         </div>
