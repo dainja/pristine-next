@@ -2,11 +2,8 @@ import Image from "next/image";
 import hero1 from "../public/images/hero/1.jpg";
 import hero2 from "../public/images/hero/2.jpg";
 import hero3 from "../public/images/hero/3.jpg";
-<<<<<<< HEAD
-import hero4 from "../public/images/hero/4.jpg";
-=======
 import { Logo } from "./Logo";
->>>>>>> 7d2d34088d07458554f6f84fcc0e9ae87d072585
+import hero4 from "../public/images/hero/4.jpg";
 
 export const Hero: React.FC = () => {
   return (
