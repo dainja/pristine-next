@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: [
@@ -8,7 +9,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      aurora: ["Aurora"],
+      aurora: ["Aurora", ...defaultTheme.fontFamily.sans],
     },
     extend: {
       colors: {

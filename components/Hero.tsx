@@ -1,9 +1,12 @@
 import Image from "next/image";
-import plogo from "../assets/plogo-svg.svg";
 import hero1 from "../public/images/hero/1.jpg";
 import hero2 from "../public/images/hero/2.jpg";
 import hero3 from "../public/images/hero/3.jpg";
+<<<<<<< HEAD
 import hero4 from "../public/images/hero/4.jpg";
+=======
+import { Logo } from "./Logo";
+>>>>>>> 7d2d34088d07458554f6f84fcc0e9ae87d072585
 
 export const Hero: React.FC = () => {
   return (
@@ -16,11 +19,7 @@ export const Hero: React.FC = () => {
         </div>
         <div className="absolute left-0 right-0 z-10 mx-auto max-w-xs flex justify-end">
           <div className="md:-mr-11 md:-mt-11 mr-6 -mt-10">
-            <img
-              className="h-[5.25rem] w-[5.25rem] md:h-40 md:w-40"
-              src={plogo.src}
-              alt=""
-            />
+            <Logo className="h-[5.25rem] w-[5.25rem] md:h-40 md:w-40" />
           </div>
         </div>
         <div className="flex justify-center gap-2 pb-4">
