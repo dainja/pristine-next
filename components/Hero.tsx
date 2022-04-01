@@ -3,6 +3,7 @@ import plogo from "../assets/plogo-svg.svg";
 import hero1 from "../public/images/hero/1.jpg";
 import hero2 from "../public/images/hero/2.jpg";
 import hero3 from "../public/images/hero/3.jpg";
+import hero4 from "../public/images/hero/4.jpg";
 
 export const Hero: React.FC = () => {
   return (
@@ -23,8 +24,8 @@ export const Hero: React.FC = () => {
           </div>
         </div>
         <div className="flex justify-center gap-2 pb-4">
-          <div className="basis-2/5 md:flex-1 md:mt-32 mt-20 h-[24rem] md:h-[38rem] flex justify-end">
-            <div className="w-4/5 md:w-full h-full relative">
+          <div className="basis-2/5 sm:basis-1/3 md:flex-1 md:mt-32 mt-20 h-[24rem] md:h-[38rem] flex justify-end">
+            <div className="w-11/12 md:w-full h-full relative">
               <Image
                 alt=""
                 src={hero2}
@@ -49,11 +50,11 @@ export const Hero: React.FC = () => {
               />
             </div>
           </div>
-          <div className="basis-2/5 md:flex-1 h-[24rem] md:h-[38rem] mt-24 md:mt-40">
-            <div className="w-4/5 md:w-full h-full relative">
+          <div className="basis-2/5 xs:basis-1/3 md:flex-1 h-[24rem] md:h-[38rem] mt-24 md:mt-40">
+            <div className="w-11/12 md:w-full h-full relative">
               <Image
                 alt=""
-                src={hero1}
+                src={hero4}
                 sizes="33vw"
                 layout="fill"
                 objectFit="cover"
