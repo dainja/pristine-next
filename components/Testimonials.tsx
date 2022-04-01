@@ -2,8 +2,13 @@ import { StarIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import React from "react";
 import adnan from "../public/images/testimonials/adnan-testimonial.jpg";
+import adnan1 from "../public/images/testimonials/adnan-testimonial1.jpg";
 import ardita from "../public/images/testimonials/ardita-testimonial.jpg";
+import ardita1 from "../public/images/testimonials/ardita-testimonial1.jpg";
 import donna from "../public/images/testimonials/donna-testimonial.jpg";
+import donna1 from "../public/images/testimonials/donna-testimonial1.jpg";
+import donna2 from "../public/images/testimonials/donna-testimonial2.jpg";
+import donna3 from "../public/images/testimonials/donna-testimonial3.jpg";
 
 interface Testimonial {
   id: number;
@@ -29,7 +34,25 @@ const testimonials: Testimonial[] = [
     id: 3,
     text: "Hos Pristine får man förutom en otrolig frisyr ett otroligt välkomnande och servicen är på topp från att man stiger in till att man lämnar frisörsalongen. Grymt nöjd!!",
     author: "Saha A.",
-    image: donna,
+    image: donna3,
+  },
+  {
+    id: 4,
+    text: "Underbar upplevelse idag hos Donna. Lyssnar på mina önskemål och ger kompletterande tips och råd angående färg och frisyr. Så duktig och trevlig frisör. Gick därifrån och var helnöjd!",
+    author: "Jessica H.",
+    image: donna1,
+  },
+  {
+    id: 5,
+    text: "Alltid god och professionell service hos Adnan. En super trevlig person som får klippningen att bli en upplevelse varje gång!",
+    author: "Darmin Z.",
+    image: adnan1,
+  },
+  {
+    id: 6,
+    text: "Personligt bemötande med stort engagemang. Toppenresultat!",
+    author: "Maria W.",
+    image: ardita1,
   },
 ];
 
@@ -42,10 +65,10 @@ export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
         <div className="relative lg:-mt-8 lg:mb-4">
           <div
             aria-hidden="true"
-            className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
+            className="absolute inset-x-0 top-0 h-1/2 bg-custom lg:hidden"
           />
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
-            <div className="relative aspect-w-10 aspect-h-6 shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-[29rem]">
+          <div className="mx-auto max-w-xs px-4 sm:px-6 lg:p-0 lg:h-full">
+            <div className="relative aspect-w-8 sm:aspect-w-12 aspect-h-8 shadow-xl overflow-hidden sm:aspect-h-14 lg:aspect-none">
               <Image
                 objectFit="cover"
                 layout="fill"

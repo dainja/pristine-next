@@ -9,8 +9,8 @@ import { trackBookingButton } from "../src/gtag";
 const navigation = [
   { name: "Tjänster", href: "/#tjanster" },
   { name: "Om Pristine", href: "/#om-pristine" },
-  { name: "Prislista", href: "/prislista" },
   { name: "Kontakt", href: "/#kontakt" },
+  { name: "Prislista", href: "/prislista" },
 ];
 
 export const Layout: React.FC = ({ children }) => {
