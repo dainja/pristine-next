@@ -1,9 +1,9 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import plogoText from "../assets/pristine-text.svg";
 import Link from "next/link";
 import { Footer } from "./Footer";
+import { TextLogo } from "./Logo";
 
 const navigation = [
   { name: "Tjänster", href: "/#tjanster" },
@@ -27,11 +27,7 @@ export const Layout: React.FC = ({ children }) => {
                   <Link href="/#">
                     <a>
                       <span className="sr-only">Pristine</span>
-                      <img
-                        className="md:w-36 w-24"
-                        src={plogoText.src}
-                        alt=""
-                      />
+                      <TextLogo className="md:w-36 w-24" />
                     </a>
                   </Link>
                   <div className="flex items-center md:hidden">
@@ -91,11 +87,7 @@ export const Layout: React.FC = ({ children }) => {
                     <Link href="/#">
                       <a>
                         <span className="sr-only">Pristine</span>
-                        <img
-                          className="md:w-36 w-24"
-                          src={plogoText.src}
-                          alt=""
-                        />
+                        <TextLogo />
                       </a>
                     </Link>
                   </div>

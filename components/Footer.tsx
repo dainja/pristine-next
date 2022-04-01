@@ -1,4 +1,4 @@
-import plogoText from "../assets/pristine-text.svg";
+import { TextLogo } from "./Logo";
 
 const footerNavigation = [
   {
@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
     <footer className="bg-[#04191B]">
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
-          <img className="w-28 invert" src={plogoText.src} alt="Company name" />
+          <TextLogo className="w-28 invert" />
 
           {footerNavigation.map((item) => (
             <a
