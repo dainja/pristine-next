@@ -5,7 +5,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   images: {
-    domains: ["images.unsplash.com"],
+    domains: ["cdn.sanity.io"],
     formats: ["image/avif", "image/webp"],
   },
   poweredByHeader: false,

@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 
 import { Testimonials } from "../components/Testimonials";
@@ -9,8 +9,14 @@ import { Contact } from "../components/Contact";
 import { Blurb } from "../components/Blurb";
 import { NextSeo } from "next-seo";
 import { structuredData } from "../src/structuredData";
+import { getImages, Post } from "../src/sanity";
+import { Instagram } from "../components/Instagram";
 
-const Home: NextPage = () => {
+interface Props {
+  posts: Post[];
+}
+
+const Home: NextPage<Props> = ({ posts }) => {
   return (
     <>
       <Head>
@@ -43,6 +49,7 @@ const Home: NextPage = () => {
         <Services />
       </section>
       <Testimonials />
+      <Instagram posts={posts} />
       <section id="om-pristine" className="pt-12 -mt-12">
         <About />
       </section>
@@ -51,6 +58,17 @@ const Home: NextPage = () => {
       </section>
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const posts = await getImages();
+
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 600,
+  };
 };
 
 export default Home;
