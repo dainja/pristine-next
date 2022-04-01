@@ -43,7 +43,12 @@ const Home: NextPage<Props> = ({ groups }) => {
       <div className="relative bg-custom1 py-8 sm:py-12 lg:py-16">
         <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
           <div className="w-full mb-8 max-w-3xl aspect-[16/10] mx-auto rounded overflow-hidden">
-            <Image alt="" src={pricelist} layout="responsive" />
+            <Image
+              alt=""
+              src={pricelist}
+              placeholder="blur"
+              layout="responsive"
+            />
           </div>
           <h1 className="text-3xl sm:text-4xl text-center text-gray-900 tracking-tight font-aurora">
             Prislista
