@@ -89,8 +89,10 @@ export const Layout: React.FC = ({ children }) => {
                   <div>
                     <Link href="/#">
                       <a>
-                        <span className="sr-only">Pristine</span>
-                        <TextLogo className="md:w-36 w-24" />
+                        <Popover.Button>
+                          <span className="sr-only">Pristine</span>
+                          <TextLogo className="md:w-36 w-24" />
+                        </Popover.Button>
                       </a>
                     </Link>
                   </div>
