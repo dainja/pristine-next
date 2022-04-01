@@ -151,8 +151,10 @@ import { Carousel } from "./carousel/Carousel";
 
 export const Testimonials = () => (
   <Carousel autoPlay={true} interval={10000} loop={true}>
-    {testimonials.map((item, i) => (
-      <Testimonial testimonial={item} key={i} />
-    ))}
+    {testimonials
+      .sort((a, b) => 0.5 - Math.random())
+      .map((item, i) => (
+        <Testimonial testimonial={item} key={i} />
+      ))}
   </Carousel>
 );
