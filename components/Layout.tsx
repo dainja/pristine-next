@@ -4,6 +4,7 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { Footer } from "./Footer";
 import { TextLogo } from "./Logo";
+import { trackBookingButton } from "../src/gtag";
 
 const navigation = [
   { name: "Tjänster", href: "/#tjanster" },
@@ -33,6 +34,7 @@ export const Layout: React.FC = ({ children }) => {
                   <div className="flex items-center md:hidden">
                     <a
                       href="https://www.bokadirekt.se/places/pristine-40594"
+                      onClick={() => trackBookingButton("header")}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium text-white bg-custom2 hover:bg-gray-700 mr-4 rounded"
@@ -58,6 +60,7 @@ export const Layout: React.FC = ({ children }) => {
               <div className="hidden md:flex md:items-center md:space-x-6">
                 <a
                   href="https://www.bokadirekt.se/places/pristine-40594"
+                  onClick={() => trackBookingButton("header")}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium text-white bg-custom2 hover:bg-gray-700 rounded"
@@ -113,6 +116,7 @@ export const Layout: React.FC = ({ children }) => {
                   <div className="mt-6 px-5">
                     <a
                       href="https://www.bokadirekt.se/places/pristine-40594"
+                      onClick={() => trackBookingButton("header")}
                       target="_blank"
                       rel="noreferrer"
                       className="block text-center w-full py-3 px-4  shadow bg-custom2 hover:bg-gray-700 text-white font-medium"

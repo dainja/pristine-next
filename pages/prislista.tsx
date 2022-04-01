@@ -5,6 +5,7 @@ import { fetchPricelistGroups, Group } from "../src/pricelist";
 import { Fragment } from "react";
 import pricelist from "../public/images/pricelist.jpeg";
 import Image from "next/image";
+import { trackBookingButton } from "../src/gtag";
 
 const Information: React.FC<{ text: string }> = ({ text }) => (
   <p className="flex items-center text-sm text-gray-500 text-left">
@@ -68,6 +69,7 @@ const Home: NextPage<Props> = ({ groups }) => {
                         href={`https://www.bokadirekt.se${
                           service.link ?? `/places/${group.source}`
                         }`}
+                        onClick={() => trackBookingButton(service.name)}
                         className="hover:bg-gray-200 flex items-center justify-between"
                         rel="noreferrer"
                       >

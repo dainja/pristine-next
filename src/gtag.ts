@@ -7,11 +7,26 @@ export const pageview = (url: string) => {
   });
 };
 
+type Event = {
+  action: string;
+  category?: string;
+  label?: string;
+  value?: number;
+};
+
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
-export const event = ({ action, category, label, value }: any) => {
+export const event = ({ action, category, label, value }: Event) => {
   window.gtag("event", action, {
     event_category: category,
     event_label: label,
     value: value,
   });
 };
+
+export function trackBookingButton(label: string) {
+  event({
+    action: "click",
+    category: "booking",
+    label,
+  });
+}
