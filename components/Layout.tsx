@@ -87,7 +87,7 @@ export const Layout: React.FC = ({ children }) => {
                     <Link href="/#">
                       <a>
                         <span className="sr-only">Pristine</span>
-                        <TextLogo />
+                        <TextLogo className="md:w-36 w-24" />
                       </a>
                     </Link>
                   </div>
