@@ -9,6 +9,7 @@ import donna from "../public/images/testimonials/donna-testimonial.jpg";
 import donna1 from "../public/images/testimonials/donna-testimonial1.jpg";
 import donna2 from "../public/images/testimonials/donna-testimonial2.jpg";
 import donna3 from "../public/images/testimonials/donna-testimonial3.jpg";
+import { trackBookingButton } from "../src/gtag";
 
 interface Testimonial {
   id: number;
@@ -133,6 +134,7 @@ export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
                     href="https://www.bokadirekt.se/places/pristine-40594"
                     target="_blank"
                     rel="noreferrer"
+                    onClick={() => trackBookingButton("testimonials")}
                     className="font-medium text-red-300"
                   >
                     250 recensioner på bokadirekt.se
