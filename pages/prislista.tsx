@@ -75,14 +75,14 @@ const Home: NextPage<Props> = ({ groups }) => {
                       >
                         <div className="px-4 py-4 sm:px-6">
                           <div>
-                            <p className="text-sm font-medium text-custom2 text-left ">
+                            <p className="text-sm font-medium text-tarawera text-left ">
                               {service.name}
                             </p>
                             <Information text={service.duration} />
                           </div>
                         </div>
                         <div className="ml-2 flex-shrink-0">
-                          <button className="inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-md text-white bg-custom2 hover:bg-gray-700 mr-2">
+                          <button className="inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-md text-white bg-tarawera hover:bg-gray-700 mr-2">
                             Boka
                             <ExternalLinkIcon
                               className="-mr-1 ml-3 h-5 w-5 text-white"

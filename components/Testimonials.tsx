@@ -60,7 +60,7 @@ export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
   testimonial,
 }) => {
   return (
-    <div className="pb-16 bg-custom2 lg:pb-0 lg:z-10 lg:relative">
+    <div className="pb-16 bg-tarawera lg:pb-0 lg:z-10 lg:relative">
       <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8 flex-shrink-0">
         <div className="relative lg:-mt-8 lg:mb-4">
           <div

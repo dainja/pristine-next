@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const Contact: React.FC = () => {
   return (
-    <div className="relative bg-custom2" id="kontakt">
+    <div className="relative bg-tarawera" id="kontakt">
       <div className="relative h-56 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
         <Image
           objectFit="cover"

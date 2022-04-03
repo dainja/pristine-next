@@ -37,7 +37,7 @@ export const Layout: React.FC = ({ children }) => {
                       onClick={() => trackBookingButton("header")}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium text-white bg-custom2 hover:bg-gray-700 mr-4 rounded"
+                      className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium text-white bg-tarawera hover:bg-gray-700 mr-4 rounded"
                     >
                       BOKA TID
                     </a>
@@ -63,7 +63,7 @@ export const Layout: React.FC = ({ children }) => {
                   onClick={() => trackBookingButton("header")}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium text-white bg-custom2 hover:bg-gray-700 rounded"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium text-white bg-tarawera hover:bg-gray-700 rounded"
                 >
                   BOKA TID
                 </a>
@@ -121,7 +121,7 @@ export const Layout: React.FC = ({ children }) => {
                       onClick={() => trackBookingButton("header")}
                       target="_blank"
                       rel="noreferrer"
-                      className="block text-center w-full py-3 px-4  shadow bg-custom2 hover:bg-gray-700 text-white font-medium"
+                      className="block text-center w-full py-3 px-4  shadow bg-tarawera hover:bg-gray-700 text-white font-medium"
                     >
                       BOKA TID
                     </a>
