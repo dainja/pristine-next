@@ -91,6 +91,7 @@ export const Contact: React.FC = () => {
               </a>
               <a
                 href="tel:+4647016120"
+                onClick={() => trackBookingButton("phone")}
                 className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50"
               >
                 <svg
