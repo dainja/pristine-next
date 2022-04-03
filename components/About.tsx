@@ -82,7 +82,7 @@ export const About: React.FC = () => {
                   <h3 className="text-sm font-medium text-cyan-600">
                     <span>{member.role}</span>
                   </h3>
-                  <p className="block mt-2">
+                  <div className="block mt-2">
                     <p className="text-2xl font-semibold text-gray-900 font-aurora">
                       {member.name}
                     </p>
@@ -99,7 +99,7 @@ export const About: React.FC = () => {
 
                       <p>{member.about3}</p>
                     </div>
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
