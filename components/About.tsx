@@ -87,14 +87,14 @@ export const About: React.FC = () => {
                       {member.name}
                     </p>
                     <div className="mt-3 text-base text-gray-500">
-                      <h5 className="font-bold">Vem är {member.name}?</h5>
+                      <h4 className="font-bold">Vem är {member.name}?</h4>
                       <p> {member.about}</p>
                       <br />
-                      <h5 className="font-bold">Skapar?</h5>
+                      <h4 className="font-bold">Skapar?</h4>
                       <p>{member.about2}</p>
                       <br />
                       {member.about3 ? (
-                        <h5 className="font-bold">Favoritprodukt</h5>
+                        <h4 className="font-bold">Favoritprodukt</h4>
                       ) : null}
 
                       <p>{member.about3}</p>
