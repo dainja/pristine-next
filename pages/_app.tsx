@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <DefaultSeo
-        titleTemplate="%s | Pristine i Växjö"
+        titleTemplate="%s | Pristine - Hår & skönhetssalong i Växjö"
         defaultTitle="Pristine - Hår & skönhetssalong i Växjö"
         openGraph={{
           type: "website",

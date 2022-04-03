@@ -2,6 +2,7 @@ import { ExternalLinkIcon } from "@heroicons/react/solid";
 
 import map from "../public/images/map.svg";
 import Image from "next/image";
+import { trackBookingButton } from "../src/gtag";
 
 export const Contact: React.FC = () => {
   return (
@@ -22,10 +23,10 @@ export const Contact: React.FC = () => {
           </h2>
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-10">
             <div>
-              <h3 className="italic text-base font-semibold tracking-wider text-red-300 ">
+              <h3 className="text-base font-semibold tracking-wider text-red-300 ">
                 Adress
               </h3>
-              <div className="mt-2 text-white">
+              <div className="text-white">
                 <p>
                   Pristine
                   <br />
@@ -36,10 +37,10 @@ export const Contact: React.FC = () => {
               </div>
             </div>
             <div className="lg:max-w-[14rem] max-w-[14rem]">
-              <h3 className="italic text-base font-semibold tracking-wider text-red-300 ">
+              <h3 className="text-base font-semibold tracking-wider text-red-300 ">
                 Öppettider
               </h3>
-              <div className="mt-2 text-white">
+              <div className="text-white">
                 <div>
                   <div className="flex justify-between">
                     <span>Måndag - Fredag</span> <span>9.00 - 18.00</span>
@@ -51,10 +52,10 @@ export const Contact: React.FC = () => {
               </div>
             </div>
             <div>
-              <h3 className="italic text-base font-semibold tracking-wider text-red-300 ">
+              <h3 className="text-base font-semibold tracking-wider text-red-300 ">
                 Betalning
               </h3>
-              <div className="mt-2 text-white">
+              <div className="text-white">
                 <p>
                   Tänk på att vi inte tar emot kontanter vid betalning i vår
                   fysiska butik.
@@ -62,10 +63,10 @@ export const Contact: React.FC = () => {
               </div>
             </div>
             <div>
-              <h3 className="italic text-base font-semibold tracking-wider text-red-300 ">
+              <h3 className="text-base font-semibold tracking-wider text-red-300 ">
                 Debitering
               </h3>
-              <div className="mt-2 text-white">
+              <div className="text-white">
                 <p>
                   Avbokning av behandling ska ske senast 24 timmar före bokad
                   tid. Vid uteblivet besök debiteras 75% av kostnaden.
@@ -79,6 +80,7 @@ export const Contact: React.FC = () => {
                 href="https://www.bokadirekt.se/places/pristine-40594"
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackBookingButton("contact")}
                 className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50  mr-2"
               >
                 Boka tid

@@ -23,10 +23,10 @@ export const event = ({ action, category, label, value }: Event) => {
   });
 };
 
-export function trackBookingButton(label: string) {
+export function trackBookingButton(category: string, label?: string) {
   event({
-    action: "click",
-    category: "booking",
+    action: "booking",
+    category,
     label,
   });
 }

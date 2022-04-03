@@ -69,7 +69,9 @@ const Home: NextPage<Props> = ({ groups }) => {
                         href={`https://www.bokadirekt.se${
                           service.link ?? `/places/${group.source}`
                         }`}
-                        onClick={() => trackBookingButton(service.name)}
+                        onClick={() =>
+                          trackBookingButton("pricelist", service.name)
+                        }
                         className="hover:bg-gray-200 flex items-center justify-between"
                         rel="noreferrer"
                       >
