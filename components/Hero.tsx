@@ -9,14 +9,9 @@ export const Hero: React.FC = () => {
   return (
     <div className="pt-16 bg-custom sm:pt-16 lg:pt-16 lg:pb-14 lg:overflow-hidden">
       <div className="mx-auto max-w-7xl lg:px-8">
-        <div className="absolute left-0 right-0 text-5xl md:text-7xl z-10 max-w-xs mx-auto md:leading-[3.5rem] leading-10 -mt-10 md:mt-0">
-          <p className="md:ml-11 ml-20 font-aurora">HÅR</p>
-          <p className="md:-ml-16 ml-5 font-aurora">SALONG</p>
-          <p className="md:ml-16 ml-24 font-aurora">GRUPP</p>
-        </div>
-        <div className="absolute left-0 right-0 z-10 mx-auto max-w-xs flex justify-end">
-          <div className="md:-mr-11 md:-mt-11 mr-6 -mt-10">
-            <Logo className="h-[5.25rem] w-[5.25rem] md:h-40 md:w-40" />
+        <div className="absolute left-0 right-0 z-10 mx-auto max-w-xs flex justify-center">
+          <div className="md:-mr-3 md:-mt-11 sm:mr-8 -mt-10">
+            <Logo className="h-32 w-32 md:w-[16.5rem] md:h-[16.5rem] sm:w-40 sm:h-40" />
           </div>
         </div>
         <div className="flex justify-center gap-2 pb-4">
