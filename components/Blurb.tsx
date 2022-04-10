@@ -7,7 +7,7 @@ export const Blurb: React.FC = () => {
       <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
         <div>
           <h1 className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl font-aurora">
-            Salong Pristine
+            Pristine
           </h1>
           <div className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
             <p className="italic">adjective</p>
