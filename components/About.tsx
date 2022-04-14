@@ -20,7 +20,7 @@ const staff: Staff[] = [
     role: "FRISÖR",
     image: donna,
     about:
-      "Arbetat som frisör i 7 år. Frisöryrket har varit min dröm så länge jag kan minnas. Jag har gått en hel del utbildningar under alla år såsom färgutbildningar, klipp-tekniker och även Hairtalk stylist",
+      "Arbetat som frisör i 7 år. Frisöryrket har varit min dröm så länge jag kan minnas. Jag har gått en hel del utbildningar under alla år såsom färgutbildningar, klipp-tekniker och även Hairtalk stylist.",
     about2:
       "Älskar att jobba med allt inom hår särskilt ljusa hår och skapa färgförändringar.",
     about3: "Olaplex.",
