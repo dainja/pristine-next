@@ -16,7 +16,7 @@ const footerNavigation = [
   },
   {
     name: "Facebook",
-    href: "#",
+    href: "https://www.facebook.com/Pristine-V%C3%A4xj%C3%B6-110734040524288",
     icon: (props: any) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path

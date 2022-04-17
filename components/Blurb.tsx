@@ -1,5 +1,5 @@
 import Image from "next/image";
-import blurb from "../public/images/blurb1.jpg";
+import blurb from "../public/images/blurb3.jpg";
 
 export const Blurb: React.FC = () => {
   return (
@@ -53,7 +53,7 @@ export const Blurb: React.FC = () => {
               layout="responsive"
               objectFit="cover"
               placeholder="blur"
-              className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 grayscale"
+              className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
             />
           </div>
         </div>
