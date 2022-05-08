@@ -45,7 +45,7 @@ export const Blurb: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80 relative overflow-hidden">
+        <div className="mt-12 pb-40 relative overflow-hidden">
           <div className="lg:-top-16 relative">
             <Image
               alt=""

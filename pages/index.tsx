@@ -3,8 +3,6 @@ import Head from "next/head";
 
 import { Testimonials } from "../components/Testimonials";
 import { Hero } from "../components/Hero";
-import { About } from "../components/About";
-import { Services } from "../components/Services";
 import { Contact } from "../components/Contact";
 import { Blurb } from "../components/Blurb";
 import { NextSeo } from "next-seo";
@@ -39,16 +37,7 @@ const Home: NextPage = () => {
 
       <Hero />
       <Blurb />
-      <section id="tjanster" className="pt-12 -mt-12">
-        <Services />
-      </section>
       <Testimonials />
-      <section id="om-pristine" className="pt-12 -mt-12">
-        <About />
-      </section>
-      <section id="kontakt" className="pt-12 -mt-12">
-        <Contact />
-      </section>
     </>
   );
 };

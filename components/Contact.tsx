@@ -77,7 +77,7 @@ export const Contact: React.FC = () => {
           <div className="mt-8">
             <div className="inline-flex rounded-md shadow justify-between">
               <a
-                href="https://www.bokadirekt.se/places/pristine-40594"
+                href="https://www.bokadirekt.se/places/pristine-46831"
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => trackBookingButton("contact")}

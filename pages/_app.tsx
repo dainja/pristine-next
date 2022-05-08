@@ -7,7 +7,7 @@ import Script from "next/script";
 import { useEffect } from "react";
 import * as gtag from "../src/gtag";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function PristineApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url: string) => {
@@ -57,4 +57,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default PristineApp;
