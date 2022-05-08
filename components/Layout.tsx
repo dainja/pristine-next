@@ -15,8 +15,8 @@ const navigation = [
 
 export const Layout: React.FC = ({ children }) => {
   return (
-    <div className="bg-white">
-      <div className="relative overflow-hidden">
+    <div className="bg-custom1">
+      <div className="relative overflow-hidden flex flex-col min-h-screen justify-between">
         <Popover as="header" className="fixed w-full z-50">
           <div className="bg-custom py-6">
             <nav
