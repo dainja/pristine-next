@@ -131,7 +131,7 @@ export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
                   <span className="font-medium text-white">5 stjärnor </span>
                   från över{" "}
                   <a
-                    href="https://www.bokadirekt.se/places/pristine-40594"
+                    href="https://www.bokadirekt.se/places/pristine-46831"
                     target="_blank"
                     rel="noreferrer"
                     onClick={() => trackBookingButton("testimonials")}

@@ -33,7 +33,7 @@ export const Layout: React.FC = ({ children }) => {
                   </Link>
                   <div className="flex items-center md:hidden">
                     <a
-                      href="https://www.bokadirekt.se/places/pristine-40594"
+                      href="https://www.bokadirekt.se/places/pristine-46831"
                       onClick={() => trackBookingButton("header")}
                       target="_blank"
                       rel="noreferrer"
@@ -59,7 +59,7 @@ export const Layout: React.FC = ({ children }) => {
               </div>
               <div className="hidden md:flex md:items-center md:space-x-6">
                 <a
-                  href="https://www.bokadirekt.se/places/pristine-40594"
+                  href="https://www.bokadirekt.se/places/pristine-46831"
                   onClick={() => trackBookingButton("header")}
                   target="_blank"
                   rel="noreferrer"
@@ -117,7 +117,7 @@ export const Layout: React.FC = ({ children }) => {
                   </div>
                   <div className="mt-6 px-5">
                     <a
-                      href="https://www.bokadirekt.se/places/pristine-40594"
+                      href="https://www.bokadirekt.se/places/pristine-46831"
                       onClick={() => trackBookingButton("header")}
                       target="_blank"
                       rel="noreferrer"

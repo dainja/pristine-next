@@ -13,7 +13,7 @@ export interface Group {
   source: string;
 }
 
-const urls = ["pristine-40594", "beautybyardita-46262"];
+const urls = ["pristine-46831", "beautybyardita-46262"];
 
 async function getGroups(url: string): Promise<Group[]> {
   const request = await fetch("https://www.bokadirekt.se/places/" + url);
