@@ -61,12 +61,12 @@ export const Testimonial: React.FC<{ testimonial: Testimonial }> = ({
   testimonial,
 }) => {
   return (
-    <div className="pb-16 bg-tarawera lg:pb-0 lg:z-10 lg:relative">
+    <div className="pb-16 mb-16 bg-tarawera lg:pb-0 lg:z-10 lg:relative">
       <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8 flex-shrink-0">
         <div className="relative lg:-mt-8 lg:mb-4">
           <div
             aria-hidden="true"
-            className="absolute inset-x-0 top-0 h-1/2 bg-custom lg:hidden"
+            className="absolute inset-x-0 top-0 h-1/2 bg-custom1 lg:hidden"
           />
           <div className="mx-auto max-w-xs px-4 sm:px-6 lg:p-0 lg:h-full">
             <div className="relative aspect-w-8 sm:aspect-w-12 aspect-h-8 shadow-xl overflow-hidden sm:aspect-h-14 lg:aspect-none">

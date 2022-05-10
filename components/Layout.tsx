@@ -5,18 +5,19 @@ import Link from "next/link";
 import { Footer } from "./Footer";
 import { TextLogo } from "./Logo";
 import { trackBookingButton } from "../src/gtag";
+import ActiveLink from "./ActiveLink";
 
 const navigation = [
-  { name: "Tjänster", href: "/#tjanster" },
-  { name: "Om Pristine", href: "/#om-pristine" },
-  { name: "Kontakt", href: "/#kontakt" },
+  { name: "Hem", href: "/#" },
+  { name: "Om Pristine", href: "/om-pristine" },
+  { name: "Kontakt", href: "/kontakt" },
   { name: "Prislista", href: "/prislista" },
 ];
 
 export const Layout: React.FC = ({ children }) => {
   return (
-    <div className="bg-white">
-      <div className="relative overflow-hidden">
+    <div className="bg-custom1">
+      <div className="relative overflow-hidden flex flex-col min-h-screen justify-between">
         <Popover as="header" className="fixed w-full z-50">
           <div className="bg-custom py-6">
             <nav
@@ -25,7 +26,7 @@ export const Layout: React.FC = ({ children }) => {
             >
               <div className="flex items-center flex-1">
                 <div className="flex items-center justify-between w-full md:w-full">
-                  <Link href="/#">
+                  <Link href="/">
                     <a>
                       <span className="sr-only">Pristine</span>
                       <TextLogo className="md:w-36 w-24" />
@@ -47,13 +48,17 @@ export const Layout: React.FC = ({ children }) => {
                     </Popover.Button>
                   </div>
                 </div>
-                <div className="hidden space-x-8 md:flex md:mx-10">
+                <div className="hidden space-x-8 md:flex md:mx-10 items-center">
                   {navigation.map((item) => (
-                    <Link key={item.name} href={item.href}>
+                    <ActiveLink
+                      activeClassName="bg-tarawera text-white-custom inline-flex items-center px-4 py-2 border border-transparent text-base font-medium text-white bg-tarawera rounded"
+                      key={item.name}
+                      href={item.href}
+                    >
                       <a className="text-base font-medium text-gray-700 hover:text-gray-500 whitespace-nowrap">
                         {item.name}
                       </a>
-                    </Link>
+                    </ActiveLink>
                   ))}
                 </div>
               </div>
@@ -106,13 +111,17 @@ export const Layout: React.FC = ({ children }) => {
                 <div className="pt-5 pb-6">
                   <div className="px-2 space-y-1">
                     {navigation.map((item) => (
-                      <Link key={item.name} href={item.href}>
+                      <ActiveLink
+                        activeClassName="bg-tarawera text-white-custom"
+                        key={item.name}
+                        href={item.href}
+                      >
                         <a className="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-50">
                           <Popover.Button className="block w-full text-base font-medium text-left">
                             {item.name}
                           </Popover.Button>
                         </a>
-                      </Link>
+                      </ActiveLink>
                     ))}
                   </div>
                   <div className="mt-6 px-5">
