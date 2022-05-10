@@ -45,7 +45,7 @@ export const Blurb: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="mt-12 pb-40 relative overflow-hidden">
+        <div className="mt-12 relative overflow-hidden">
           <div className="lg:-top-16 relative">
             <Image
               alt=""
@@ -56,6 +56,26 @@ export const Blurb: React.FC = () => {
               className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
             />
           </div>
+        </div>
+        <div className="relative flex pt-20 lg:pt-5 items-center pb-20">
+          <div className="flex-grow border-t border-gray-400"></div>
+          <span className="flex-shrink mx-4 text-gray-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              />
+            </svg>
+          </span>
+          <div className="flex-grow border-t border-gray-400"></div>
         </div>
       </div>
     </div>

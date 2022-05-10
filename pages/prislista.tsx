@@ -22,7 +22,7 @@ interface Props {
   groups: Group[];
 }
 
-const Home: NextPage<Props> = ({ groups }) => {
+const PricelistPage: NextPage<Props> = ({ groups }) => {
   return (
     <>
       <NextSeo
@@ -52,9 +52,7 @@ const Home: NextPage<Props> = ({ groups }) => {
               objectFit="cover"
             />
           </div>
-          <h1 className="text-3xl sm:text-4xl text-center text-gray-900 tracking-tight font-aurora">
-            Prislista
-          </h1>
+
           <div className="overflow-hidden sm:rounded-md">
             <ul role="list" className="mb-12">
               {groups.map((group, index) => (
@@ -116,4 +114,4 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-export default Home;
+export default PricelistPage;

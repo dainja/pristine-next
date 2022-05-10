@@ -1,3 +1,4 @@
+import { SaloonLogo } from "../components/SaloonLogo";
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -37,7 +38,10 @@ const Home: NextPage = () => {
 
       <Hero />
       <Blurb />
+
       <Testimonials />
+      <SaloonLogo />
+      <Contact />
     </>
   );
 };

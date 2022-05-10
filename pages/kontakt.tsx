@@ -4,17 +4,24 @@ import map from "../public/images/map.svg";
 import Image from "next/image";
 import { trackBookingButton } from "../src/gtag";
 import { NextSeo } from "next-seo";
+import blurb from "../public/images/blurb.jpg";
 
-const Home: NextPage = () => {
+const ContactPage: NextPage = () => {
   return (
     <>
       <NextSeo title="Om Pristine" />
       <div className="relative bg-custom1 pt-16 sm:pt-20 pb-8">
         <div className="relative">
           <div className="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-            <h2 className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl  font-aurora">
-              Kontakt
-            </h2>
+            <div className="w-full relative mb-8 max-w-3xl aspect-[16/10] md:aspect-[16/10] mx-auto rounded overflow-hidden mix-blend-luminosity">
+              <Image
+                alt=""
+                src={blurb}
+                placeholder="blur"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
             <p className="mt-5 mx-auto max-w-prose text-xl text-gray-500"></p>
           </div>
         </div>
@@ -132,4 +139,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default ContactPage;

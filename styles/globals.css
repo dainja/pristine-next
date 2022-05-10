@@ -29,6 +29,10 @@ a {
   font-weight: 100;
 }
 
+.text-white-custom {
+  color: #fff !important;
+}
+
 @media (min-width: 1024px) {
   .object-position {
     object-position: 0 -10rem;

@@ -51,7 +51,7 @@ const staff: Staff[] = [
     about3: null,
   },
 ];
-const Home: NextPage = () => {
+const AboutPage: NextPage = () => {
   return (
     <>
       <NextSeo title="Om Pristine" />
@@ -114,4 +114,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default AboutPage;
