@@ -8,7 +8,7 @@ import Image from "next/image";
 import { trackBookingButton } from "../src/gtag";
 
 const Information: React.FC<{ text: string }> = ({ text }) => (
-  <p className="flex items-center text-sm text-gray-500 text-left">
+  <p className="flex items-center text-sm text-left text-gray-500">
     {text.split(", ").map((value, index, array) => (
       <Fragment key={index}>
         <span className="whitespace-nowrap">{value}</span>
@@ -41,8 +41,8 @@ const PricelistPage: NextPage<Props> = ({ groups }) => {
           cardType: "summary_large_image",
         }}
       />
-      <div className="relative bg-custom1 py-8 sm:py-12 lg:py-16">
-        <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
+      <div className="relative py-8 bg-custom1 sm:py-12 lg:py-16">
+        <div className="max-w-md px-4 mx-auto text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
           <div className="w-full relative mb-8 max-w-3xl aspect-[1/1] md:aspect-[16/10] mx-auto rounded overflow-hidden mix-blend-luminosity">
             <Image
               alt=""
@@ -57,7 +57,7 @@ const PricelistPage: NextPage<Props> = ({ groups }) => {
             <ul role="list" className="mb-12">
               {groups.map((group, index) => (
                 <div key={index}>
-                  <h2 className="mt-12 mb-3 ml-6 text-2xl sm:text-3xl text-left text-gray-900 tracking-tight font-aurora">
+                  <h2 className="mt-12 mb-3 ml-6 text-2xl tracking-tight text-left text-gray-900 sm:text-3xl font-aurora">
                     {group.name}
                   </h2>
                   {group.services.map((service, index) => (
@@ -70,22 +70,22 @@ const PricelistPage: NextPage<Props> = ({ groups }) => {
                         onClick={() =>
                           trackBookingButton("pricelist", service.name)
                         }
-                        className="hover:bg-gray-200 flex items-center justify-between"
+                        className="flex items-center justify-between hover:bg-gray-200"
                         rel="noreferrer"
                       >
                         <div className="px-4 py-4 sm:px-6">
                           <div>
-                            <p className="text-sm font-medium text-tarawera text-left ">
+                            <p className="text-sm font-medium text-left text-tarawera ">
                               {service.name}
                             </p>
-                            <Information text={service.duration} />
+                            <Information text={service.description} />
                           </div>
                         </div>
-                        <div className="ml-2 flex-shrink-0">
-                          <button className="inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-md text-white bg-tarawera hover:bg-gray-700 mr-2">
+                        <div className="flex-shrink-0 ml-2">
+                          <button className="inline-flex items-center justify-center px-3 py-2 mr-2 text-base font-medium text-white border border-transparent rounded-md bg-tarawera hover:bg-gray-700">
                             Boka
                             <ExternalLinkIcon
-                              className="-mr-1 ml-3 h-5 w-5 text-white"
+                              className="w-5 h-5 ml-3 -mr-1 text-white"
                               aria-hidden="true"
                             />
                           </button>

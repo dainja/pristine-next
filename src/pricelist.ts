@@ -2,8 +2,7 @@ import * as cheerio from "cheerio";
 
 interface Service {
   name: string;
-  duration: string;
-  price: string;
+  description: string;
   link?: string;
 }
 
@@ -31,11 +30,14 @@ async function getGroups(url: string): Promise<Group[]> {
     $(element)
       .find("li")
       .map((_, element) => {
+        const description = $(element)
+          .find(".service-name + div")
+          .text()
+          .split(" ·")[0];
         const service: Service = {
           name: $(element).find(".service-name").text(),
-          duration: $(element).find(".service-duration").text(),
-          price: $(element).find(".service-price").text(),
-          link: $(element).find("a").attr("href"),
+          description,
+          link: $(element).find("button").attr("href"),
         };
         group.services.push(service);
       });
