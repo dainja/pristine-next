@@ -55,11 +55,11 @@ function PristineApp({ Component, pageProps }: AppProps) {
           }}
         />
         {process.browser && (
-          <script
+          <Script
             defer
             data-domain="pristinevxo.se"
             src="https://plausible.io/js/plausible.js"
-          ></script>
+          />
         )}
         <Component {...pageProps} />
       </Layout>

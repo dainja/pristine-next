@@ -1,11 +1,11 @@
 import { GetStaticProps, NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
-import { fetchPricelistGroups, Group } from "../src/pricelist";
 import { Fragment } from "react";
 import pricelist from "../public/images/pricelist.jpeg";
 import Image from "next/image";
 import { trackBookingButton } from "../src/gtag";
+import { BokaDirekt, PricelistGroup } from "../src/BokaDirekt";
 
 const Information: React.FC<{ text: string }> = ({ text }) => (
   <p className="flex items-center text-sm text-left text-gray-500">
@@ -19,7 +19,7 @@ const Information: React.FC<{ text: string }> = ({ text }) => (
 );
 
 interface Props {
-  groups: Group[];
+  groups: PricelistGroup[];
 }
 
 const PricelistPage: NextPage<Props> = ({ groups }) => {
@@ -104,7 +104,7 @@ const PricelistPage: NextPage<Props> = ({ groups }) => {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const groups = await fetchPricelistGroups();
+  const groups = await BokaDirekt.fetchPricelistGroups();
 
   return {
     props: {
