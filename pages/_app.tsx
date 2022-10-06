@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import Script from "next/script";
 import { useEffect } from "react";
 import * as gtag from "../src/gtag";
+import PlausibleProvider from "next-plausible";
 
 function PristineApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -24,24 +25,25 @@ function PristineApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <Layout>
-      <DefaultSeo
-        titleTemplate="%s | Pristine - Hår & skönhetssalong i Växjö"
-        defaultTitle="Pristine - Hår & skönhetssalong i Växjö"
-        openGraph={{
-          type: "website",
-          locale: "sv_SE",
-          site_name: "Pristine",
-        }}
-      />
-      <Script
-        strategy="worker"
-        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-      />
-      <script
-        type="text/partytown"
-        dangerouslySetInnerHTML={{
-          __html: `
+    <PlausibleProvider domain="pristinevxo.se">
+      <Layout>
+        <DefaultSeo
+          titleTemplate="%s | Pristine - Hår & skönhetssalong i Växjö"
+          defaultTitle="Pristine - Hår & skönhetssalong i Växjö"
+          openGraph={{
+            type: "website",
+            locale: "sv_SE",
+            site_name: "Pristine",
+          }}
+        />
+        <Script
+          strategy="worker"
+          src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+        />
+        <script
+          type="text/partytown"
+          dangerouslySetInnerHTML={{
+            __html: `
             window.dataLayer = window.dataLayer || [];
             window.gtag = function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -50,10 +52,18 @@ function PristineApp({ Component, pageProps }: AppProps) {
                 page_path: window.location.pathname,
             });
         `,
-        }}
-      />
-      <Component {...pageProps} />
-    </Layout>
+          }}
+        />
+        {process.browser && (
+          <script
+            defer
+            data-domain="pristinevxo.se"
+            src="https://plausible.io/js/plausible.js"
+          ></script>
+        )}
+        <Component {...pageProps} />
+      </Layout>
+    </PlausibleProvider>
   );
 }
 
