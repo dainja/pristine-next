@@ -92,7 +92,11 @@ export class BokaDirekt {
     );
     const json = await res.json();
     const reviews = json.items as Review[];
-    return reviews.slice(0, 10);
+    const filteredReviews = reviews.filter(
+      (review) => review.review.score === 5
+    );
+
+    return filteredReviews.slice(0, 10);
   }
 
   static async getReviews() {
