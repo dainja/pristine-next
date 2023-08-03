@@ -44,7 +44,7 @@ const Home: NextPage<Props> = ({ reviews }) => {
       <Hero />
       <Blurb />
 
-      <Testimonials />
+      <Testimonials reviews={reviews} />
       <SaloonLogo />
       <Contact />
     </>

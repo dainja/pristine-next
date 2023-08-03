@@ -43,7 +43,7 @@ export const Contact: React.FC = () => {
               <div className="text-white">
                 <div>
                   <div className="flex justify-between">
-                    <span>Måndag - Fredag</span> <span>9.00 - 18.00</span>
+                    <span>Tisdag - Fredag</span> <span>9.00 - 18.00</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Lördag</span> <span>9.00 - 15.00</span>
