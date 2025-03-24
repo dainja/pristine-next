@@ -65,7 +65,7 @@ const PricelistPage: NextPage<Props> = ({ groups }) => {
                       <a
                         target="_blank"
                         href={`https://www.bokadirekt.se${
-                          service.link ?? `/places/${group.source}`
+                          service.link || `/places/${group.source}`
                         }`}
                         onClick={() =>
                           trackBookingButton("pricelist", service.name)

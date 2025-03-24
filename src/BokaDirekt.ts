@@ -8,7 +8,7 @@ interface Place {
 interface Service {
   name: string;
   description: string;
-  link?: string;
+  link: string | null;
 }
 
 export interface PricelistGroup {
@@ -67,11 +67,11 @@ export class BokaDirekt {
           const description = $(element)
             .find(".service-name + div")
             .text()
-            .split(" ·")[0];
+            .split(" ·")[0];
           const service: Service = {
             name: $(element).find(".service-name").text(),
             description,
-            link: $(element).find("button").attr("href"),
+            link: $(element).find("button").attr("href") || null,
           };
           group.services.push(service);
         });
