@@ -33,7 +33,7 @@ const staff: Staff[] = [
     role: "BARBERARE",
     image: adnan,
     about:
-      "Utbildad barberare för både hår och skägg där jag uppfyller dina önskemål med sax, maskin och rakkniv.",
+      "Utbildad barberare för både hår och skägg där jag uppfyller dina önskemål med sax och maskin.",
     about2:
       "Fade eller skinfade är en favorit hos mig. Men jag jobbar med alla olika frisyrer och hårtyper.",
     about3:
