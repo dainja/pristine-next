@@ -17,7 +17,7 @@ export default function Document() {
           }}
         />
 
-        {/* GTM - Head Script */}
+        {/* Google Tag manager - Head Script */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
