@@ -61,6 +61,9 @@ export class BokaDirekt {
         source: place.url,
       };
       groups.push(group);
+
+      console.log(`  Found group: ${group.name}`);
+
       $(element)
         .find("li")
         .map((_, element) => {
@@ -71,9 +74,10 @@ export class BokaDirekt {
           const service: Service = {
             name: $(element).find(".service-name").text(),
             description,
-            link: $(element).find("button").attr("href") || null,
+            link: $(element).find("a").attr("href") || null,
           };
           group.services.push(service);
+          
         });
     });
     return groups;
