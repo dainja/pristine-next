@@ -3,6 +3,7 @@ import { ExternalLinkIcon } from "@heroicons/react/solid";
 import map from "../public/images/map.svg";
 import Image from "next/image";
 import { trackBookingButton } from "../src/gtag";
+import Link from "next/link";
 
 export const Contact: React.FC = () => {
   return (

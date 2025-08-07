@@ -9,20 +9,24 @@ const pageStyle: MotionStyle = {
   flex: "none",
 };
 
-const Slider = ({ x, i, onDragEnd, children }: SliderProps) => (
-  <motion.div
-    style={{
-      ...pageStyle,
-      x,
-      left: `${i * 100}%`,
-      right: `${i * 100}%`,
-    }}
-    // drag="x"
-    dragElastic={0.3}
-    onDragEnd={onDragEnd}
-  >
-    {children}
-  </motion.div>
-);
+const Slider: React.FC<SliderProps> = ({ x, i, onDragEnd, children }) => {
+  const MotionDiv = motion.div as any;
+  
+  return (
+    <MotionDiv
+      style={{
+        ...pageStyle,
+        x,
+        left: `${i * 100}%`,
+        right: `${i * 100}%`,
+      }}
+      // drag="x"
+      dragElastic={0.3}
+      onDragEnd={onDragEnd}
+    >
+      {children}
+    </MotionDiv>
+  );
+};
 
 export default Slider;

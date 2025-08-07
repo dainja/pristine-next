@@ -4,7 +4,10 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        {/* Partytown Config (keep this) */}
+        {/*
+          This is the Partytown configuration. Keep it in the <Head>
+          as it must load before all other scripts.
+        */}
         <script
           data-partytown-config
           dangerouslySetInnerHTML={{
@@ -16,20 +19,9 @@ export default function Document() {
             `,
           }}
         />
-
-        {/* Google Tag manager - Head Script */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-5RPPV55M');`,
-          }}
-        />
       </Head>
       <body>
-        {/* GTM - NoScript Fallback */}
+        {/* GTM - NoScript Fallback (keep this in the <body>) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5RPPV55M"

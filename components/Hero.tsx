@@ -1,5 +1,4 @@
 import Image from "next/image";
-import hero1 from "../public/images/hero/1.jpg";
 import hero2 from "../public/images/hero/2.jpg";
 import hero3 from "../public/images/hero/3.jpg";
 import { Logo } from "./Logo";
@@ -23,7 +22,7 @@ export const Hero: React.FC = () => {
                 sizes="33vw"
                 layout="fill"
                 objectFit="cover"
-                placeholder="blur"
+           
                 priority
               />
             </div>
@@ -36,7 +35,8 @@ export const Hero: React.FC = () => {
                 sizes="33vw"
                 layout="fill"
                 objectFit="cover"
-                placeholder="blur"
+               
+                
                 priority
               />
             </div>
@@ -49,7 +49,7 @@ export const Hero: React.FC = () => {
                 sizes="33vw"
                 layout="fill"
                 objectFit="cover"
-                placeholder="blur"
+              
                 priority
               />
             </div>

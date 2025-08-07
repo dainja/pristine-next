@@ -1,3 +1,5 @@
+// components/Layout.tsx
+
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
@@ -8,13 +10,15 @@ import { trackBookingButton } from "../src/gtag";
 import ActiveLink from "./ActiveLink";
 
 const navigation = [
-  { name: "Hem", href: "/#" },
+  { name: "Hem", href: "/" },
   { name: "Om Pristine", href: "/om-pristine" },
   { name: "Kontakt", href: "/kontakt" },
   { name: "Prislista", href: "/prislista" },
 ];
 
-export const Layout: React.FC = ({ children }) => {
+export const Layout: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   return (
     <div className="bg-custom1">
       <div className="relative overflow-hidden flex flex-col min-h-screen justify-between">
@@ -26,11 +30,8 @@ export const Layout: React.FC = ({ children }) => {
             >
               <div className="flex items-center flex-1">
                 <div className="flex items-center justify-between w-full md:w-full">
-                  <Link href="/">
-                    <a>
-                      <span className="sr-only">Pristine</span>
-                      <TextLogo className="md:w-36 w-24" />
-                    </a>
+                  <Link href="/" aria-label="Pristine">
+                    <TextLogo className="md:w-36 w-24" />
                   </Link>
                   <div className="flex items-center md:hidden">
                     <a
@@ -51,13 +52,14 @@ export const Layout: React.FC = ({ children }) => {
                 <div className="hidden space-x-8 md:flex md:mx-10 items-center">
                   {navigation.map((item) => (
                     <ActiveLink
-                      activeClassName="bg-tarawera text-white-custom inline-flex items-center px-4 py-2 border border-transparent text-base font-medium text-white bg-tarawera rounded"
                       key={item.name}
                       href={item.href}
+                      // The default class name for non-active links, including the hover state
+                      className="text-base font-medium text-gray-700 hover:text-gray-500 whitespace-nowrap inline-flex items-center px-4 py-2 border border-transparent rounded"
+                      // The class name to add when the link is active
+                      activeClassName="bg-tarawera text-white"
                     >
-                      <a className="text-base font-medium text-gray-700 hover:text-gray-500 whitespace-nowrap">
-                        {item.name}
-                      </a>
+                      {item.name}
                     </ActiveLink>
                   ))}
                 </div>
@@ -92,13 +94,8 @@ export const Layout: React.FC = ({ children }) => {
               <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="px-5 pt-4 flex items-center justify-between">
                   <div>
-                    <Link href="/#">
-                      <a>
-                        <Popover.Button>
-                          <span className="sr-only">Pristine</span>
-                          <TextLogo className="md:w-36 w-24" />
-                        </Popover.Button>
-                      </a>
+                    <Link href="/" aria-label="Pristine">
+                      <TextLogo className="md:w-36 w-24" />
                     </Link>
                   </div>
                   <div className="-mr-2">
@@ -111,17 +108,18 @@ export const Layout: React.FC = ({ children }) => {
                 <div className="pt-5 pb-6">
                   <div className="px-2 space-y-1">
                     {navigation.map((item) => (
-                      <ActiveLink
-                        activeClassName="bg-tarawera text-white-custom"
+                      <Link
                         key={item.name}
                         href={item.href}
+                        className="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-50 block w-full text-base font-medium text-left"
+                        onClick={() => {
+                          // Close the popover when a navigation item is clicked
+                          const popoverButton = document.querySelector('[data-headlessui-state]') as HTMLButtonElement;
+                          if (popoverButton) popoverButton.click();
+                        }}
                       >
-                        <a className="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-50">
-                          <Popover.Button className="block w-full text-base font-medium text-left">
-                            {item.name}
-                          </Popover.Button>
-                        </a>
-                      </ActiveLink>
+                        {item.name}
+                      </Link>
                     ))}
                   </div>
                   <div className="mt-6 px-5">
@@ -130,7 +128,7 @@ export const Layout: React.FC = ({ children }) => {
                       onClick={() => trackBookingButton("header")}
                       target="_blank"
                       rel="noreferrer"
-                      className="block text-center w-full py-3 px-4  shadow bg-tarawera hover:bg-gray-700 text-white font-medium"
+                      className="block text-center w-full py-3 px-4 shadow bg-tarawera hover:bg-gray-700 text-white font-medium"
                     >
                       BOKA TID
                     </a>

@@ -98,7 +98,7 @@ export const Testimonial: React.FC<{ review: Review }> = ({ review }) => {
                 objectFit="cover"
                 layout="fill"
                 src={getImage(review.subject.employee.name)}
-                placeholder="blur"
+                
                 alt=""
                 className="shadow-xl rounded-xl"
               />
