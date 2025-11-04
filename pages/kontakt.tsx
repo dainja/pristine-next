@@ -97,7 +97,7 @@ const ContactPage: NextPage = () => {
             <div className="mt-8">
               <div className="inline-flex rounded-md shadow justify-between">
                 <a
-                  href="https://www.bokadirekt.se/places/pristine-46831"
+                  href="https://www.bokadirekt.se/places/salong-linne-46831"
                   target="_blank"
                   rel="noreferrer"
                   onClick={() => trackBookingButton("contact")}

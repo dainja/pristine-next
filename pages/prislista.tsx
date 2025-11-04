@@ -114,5 +114,4 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-
 export default PricelistPage;

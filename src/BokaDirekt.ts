@@ -40,7 +40,7 @@ export class BokaDirekt {
   static urls: Place[] = [
     {
       id: 46831,
-      url: "pristine-46831",
+      url: "salong-linne-46831",
     },
     {
       id: 46262,
@@ -54,30 +54,56 @@ export class BokaDirekt {
     const $ = cheerio.load(text);
 
     const groups: PricelistGroup[] = [];
-    $("#services .item").map((_, element) => {
+    $("#services .flex.flex-col.pb-xl").map((_, element) => {
+      const groupName =
+        $(element).find(".py-md h2.text-h-s").first().text().trim() ||
+        $(element).find(".py-md h2").first().text().trim() ||
+        $(element).find("h2").first().text().trim();
+
       const group: PricelistGroup = {
-        name: $(element).find("h3").text(),
+        name: groupName,
         services: [],
         source: place.url,
       };
       groups.push(group);
 
-      console.log(`  Found group: ${group.name}`);
-
       $(element)
-        .find("li")
-        .map((_, element) => {
-          const description = $(element)
-            .find(".service-name + div")
-            .text()
-            .split(" ·")[0];
+        .find(".bg-surface_l2")
+        .map((_, serviceEl) => {
+          const name =
+            $(serviceEl).find("h2.text-l").first().text().trim() ||
+            $(serviceEl).find("h2").first().text().trim();
+
+          // Prefer the styled description container, fallback to text-s content minus labels/buttons
+          const detailBlock = $(serviceEl)
+            .find("div.text-fg_secondary")
+            .first();
+          let description = "";
+          if (detailBlock.length) {
+            const styled = detailBlock
+              .find("div[style]")
+              .filter((_, el) => !!$(el).text().trim())
+              .first();
+            description = (
+              styled.text() ||
+              detailBlock.clone().children("button").remove().end().text()
+            ).trim();
+          } else {
+            const raw = $(serviceEl).find("div.text-s").first().text();
+            description = raw
+              .replace(/Läs\s*mer/i, "")
+              .replace(/\b\d+\s*min\b/i, "")
+              .trim();
+          }
+
+          const link = $(serviceEl).find("a[href]").attr("href") || null;
+
           const service: Service = {
-            name: $(element).find(".service-name").text(),
+            name,
             description,
-            link: $(element).find("a").attr("href") || null,
+            link,
           };
           group.services.push(service);
-          
         });
     });
     return groups;
