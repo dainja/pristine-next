@@ -9,7 +9,7 @@ import blurb from "../public/images/blurb.jpg";
 const ContactPage: NextPage = () => {
   return (
     <>
-      <NextSeo title="Om Pristine" />
+      <NextSeo title="Om Salong Linné" />
       <div className="relative bg-custom1 pt-16 sm:pt-20 pb-8">
         <div className="relative">
           <div className="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
@@ -48,7 +48,7 @@ const ContactPage: NextPage = () => {
                 </h3>
                 <div className="text-white">
                   <p>
-                    Pristine
+                    Salong Linné
                     <br />
                     Storgatan 27
                     <br />

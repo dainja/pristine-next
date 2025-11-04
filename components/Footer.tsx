@@ -34,10 +34,10 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-tarawera-600">
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 md:flex md:items-center md:justify-center lg:px-8">
-        <div className="flex justify-center space-x-6 md:order-2">
+        <div className="flex justify-center items-center space-x-6 md:order-2">
           {/* Add passHref and wrap the custom component in a standard <a> tag */}
           <Link href="/#" passHref className="flex">
-              <TextLogo className="w-28 invert" />
+            <TextLogo className="w-28 invert" />
           </Link>
 
           {footerNavigation.map((item) => (

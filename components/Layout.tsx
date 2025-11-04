@@ -11,7 +11,7 @@ import ActiveLink from "./ActiveLink";
 
 const navigation = [
   { name: "Hem", href: "/" },
-  { name: "Om Pristine", href: "/om-pristine" },
+  { name: "Om Linné", href: "/om-linne" },
   { name: "Kontakt", href: "/kontakt" },
   { name: "Prislista", href: "/prislista" },
 ];
@@ -30,7 +30,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
             >
               <div className="flex items-center flex-1">
                 <div className="flex items-center justify-between w-full md:w-full">
-                  <Link href="/" aria-label="Pristine">
+                  <Link href="/" aria-label="Salong Linné">
                     <TextLogo className="md:w-36 w-24" />
                   </Link>
                   <div className="flex items-center md:hidden">
@@ -94,7 +94,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
               <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="px-5 pt-4 flex items-center justify-between">
                   <div>
-                    <Link href="/" aria-label="Pristine">
+                    <Link href="/" aria-label="Salong Linné">
                       <TextLogo className="md:w-36 w-24" />
                     </Link>
                   </div>
@@ -114,7 +114,9 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
                         className="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-50 block w-full text-base font-medium text-left"
                         onClick={() => {
                           // Close the popover when a navigation item is clicked
-                          const popoverButton = document.querySelector('[data-headlessui-state]') as HTMLButtonElement;
+                          const popoverButton = document.querySelector(
+                            "[data-headlessui-state]"
+                          ) as HTMLButtonElement;
                           if (popoverButton) popoverButton.click();
                         }}
                       >

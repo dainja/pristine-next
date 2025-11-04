@@ -25,15 +25,15 @@ function PristineApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <PlausibleProvider domain="pristinevxo.se">
+    <PlausibleProvider domain="salonglinne.se">
       <Layout>
         <DefaultSeo
-          titleTemplate="%s | Pristine - Hår & skönhetssalong i Växjö"
-          defaultTitle="Pristine - Hår & skönhetssalong i Växjö"
+          titleTemplate="%s | Salong Linné - Hår & skönhetssalong i Växjö"
+          defaultTitle="Salong Linné - Hår & skönhetssalong i Växjö"
           openGraph={{
             type: "website",
             locale: "sv_SE",
-            site_name: "Pristine",
+            site_name: "Salong Linné",
           }}
         />
         <Script
@@ -57,7 +57,7 @@ function PristineApp({ Component, pageProps }: AppProps) {
         {process.browser && (
           <Script
             defer
-            data-domain="pristinevxo.se"
+            data-domain="salonglinne.se"
             src="https://plausible.io/js/plausible.js"
           />
         )}

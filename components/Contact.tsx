@@ -29,7 +29,7 @@ export const Contact: React.FC = () => {
               </h3>
               <div className="text-white">
                 <p>
-                  Pristine
+                  Salong Linné
                   <br />
                   Storgatan 27
                   <br />

@@ -54,12 +54,12 @@ const staff: Staff[] = [
 const AboutPage: NextPage = () => {
   return (
     <>
-      <NextSeo title="Om Pristine" />
+      <NextSeo title="Om Salong Linné" />
       <div className="relative bg-custom1 py-16 sm:py-20 lg:py-20">
         <div className="relative">
           <div className="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
             <h2 className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl  font-aurora">
-              Om oss på Pristine
+              Om oss på Salong Linné
             </h2>
             <p className="mt-5 mx-auto max-w-prose text-xl text-gray-500"></p>
           </div>
