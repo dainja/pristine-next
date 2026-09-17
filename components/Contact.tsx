@@ -3,6 +3,7 @@ import { ExternalLinkIcon } from "@heroicons/react/solid";
 import map from "../public/images/map.svg";
 import Image from "next/image";
 import { trackBookingButton } from "../src/gtag";
+import Link from "next/link";
 
 export const Contact: React.FC = () => {
   return (
@@ -28,7 +29,7 @@ export const Contact: React.FC = () => {
               </h3>
               <div className="text-white">
                 <p>
-                  Pristine
+                  Salong Linné
                   <br />
                   Storgatan 27
                   <br />
@@ -77,7 +78,7 @@ export const Contact: React.FC = () => {
           <div className="mt-8">
             <div className="inline-flex rounded-md shadow justify-between">
               <a
-                href="https://www.bokadirekt.se/places/pristine-46831"
+                href="https://www.bokadirekt.se/places/salong-linne-46831"
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => trackBookingButton("contact")}

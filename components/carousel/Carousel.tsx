@@ -43,7 +43,11 @@ export const Carousel = ({
   const containerRef = React.useRef<HTMLDivElement>(null);
   const [index, setIndex] = React.useState(0);
 
-  const calculateNewX = () => -index * (containerRef.current?.clientWidth || 0);
+  // Wrap the function in useCallback to memoize it
+  const calculateNewX = React.useCallback(
+    () => -index * (containerRef.current?.clientWidth || 0),
+    [index]
+  );
 
   const handleEndDrag = (e: Event, dragProps: PanInfo) => {
     const clientWidth = containerRef.current?.clientWidth || 0;
@@ -61,20 +65,21 @@ export const Carousel = ({
 
   const childrens = React.Children.toArray(children);
 
-  const handleNext = () => {
+  // Wrap these functions in useCallback to prevent infinite loops
+  const handleNext = React.useCallback(() => {
     const idx = loop ? 0 : index;
     setIndex(index + 1 === childrens.length ? idx : index + 1);
-  };
+  }, [childrens.length, index, loop]);
 
-  const handlePrev = () => {
+  const handlePrev = React.useCallback(() => {
     const idx = loop ? childrens.length - 1 : 0;
     setIndex(index - 1 < 0 ? idx : index - 1);
-  };
+  }, [childrens.length, index, loop]);
 
   React.useEffect(() => {
     const controls = animate(x, calculateNewX(), transition);
     return controls.stop;
-  }, [index]);
+  }, [index, calculateNewX, x]); // Fixed: Added calculateNewX and x to the dependency array
 
   React.useEffect(() => {
     if (!autoPlay) {
@@ -82,7 +87,7 @@ export const Carousel = ({
     }
     const timer = setInterval(() => handleNext(), interval);
     return () => clearInterval(timer);
-  }, [handleNext, interval]);
+  }, [handleNext, interval, autoPlay]); // Fixed: Added autoPlay to the dependency array
 
   return (
     <Container ref={containerRef}>

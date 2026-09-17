@@ -25,7 +25,7 @@ function PristineApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <PlausibleProvider domain="pristinevxo.se">
+    <PlausibleProvider domain="salonglinne.se">
       <Layout>
         <DefaultSeo
           titleTemplate="%s | Salong Linné - Barber i Växjö"
@@ -57,7 +57,7 @@ function PristineApp({ Component, pageProps }: AppProps) {
         {process.browser && (
           <Script
             defer
-            data-domain="pristinevxo.se"
+            data-domain="salonglinne.se"
             src="https://plausible.io/js/plausible.js"
           />
         )}

@@ -26,7 +26,7 @@ const Home: NextPage<Props> = ({ reviews }) => {
       </Head>
       <NextSeo
         openGraph={{
-          url: "https://www.pristinevxo.se",
+          url: "https://www.salonglinne.se",
           images: [
             {
               url: "/api/og-image/start.png",

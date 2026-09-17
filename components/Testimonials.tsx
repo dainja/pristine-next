@@ -88,7 +88,6 @@ export const Testimonial: React.FC<{ review: Review }> = ({ review }) => {
                 objectFit="cover"
                 layout="fill"
                 src={getImage(review.subject.employee.name)}
-                placeholder="blur"
                 alt=""
                 className="shadow-xl rounded-xl"
               />
@@ -148,7 +147,7 @@ export const Testimonial: React.FC<{ review: Review }> = ({ review }) => {
                   <span className="font-medium text-white">5 stjärnor </span>
                   från över{" "}
                   <a
-                    href="https://www.bokadirekt.se/places/pristine-46831"
+                    href="https://www.bokadirekt.se/places/salong-linne-46831"
                     target="_blank"
                     rel="noreferrer"
                     onClick={() => trackBookingButton("testimonials")}

@@ -5,9 +5,9 @@ export const structuredData = {
   "@type": "HairSalon",
   name: "Salong Linné",
   image: [
-    "https://pristinevxo.se/images/google-structured-data/1x1.jpg",
-    "https://pristinevxo.se/images/google-structured-data/4x3.jpg",
-    "https://pristinevxo.se/images/google-structured-data/16x9.jpg",
+    "https://salonglinne.se/images/google-structured-data/1x1.jpg",
+    "https://salonglinne.se/images/google-structured-data/4x3.jpg",
+    "https://salonglinne.se/images/google-structured-data/16x9.jpg",
   ],
   address: {
     "@type": "PostalAddress",
@@ -21,7 +21,7 @@ export const structuredData = {
     latitude: 56.876,
     longitude: 14.809,
   },
-  url: "http://www.pristinevxo.se",
+  url: "http://www.salonglinne.se",
   telephone: "+4647016120",
   slogan: "gammaldags; ofördärvad; ren; oförändrad",
   priceRange: "$$",

@@ -13,6 +13,15 @@ const nextConfig = {
     locales: ["sv"],
     defaultLocale: "sv",
   },
+  redirects: async () => {
+    return [
+      {
+        source: "/om-pristine",
+        destination: "/om-linne",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

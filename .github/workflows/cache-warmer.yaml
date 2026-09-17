@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger og-images generation
-        run: curl -s -o /dev/null -D - https://www.pristinevxo.se/api/og-image/start.png && curl -s -o /dev/null -D - https://www.pristinevxo.se/api/og-image/pricelist.png
+        run: curl -s -o /dev/null -D - https://www.salonglinne.se/api/og-image/start.png && curl -s -o /dev/null -D - https://www.salonglinne.se/api/og-image/pricelist.png
