@@ -8,7 +8,8 @@ import Link from "next/link";
 export const Contact: React.FC = () => {
   return (
     <div className="relative bg-tarawera" id="kontakt">
-      <div className="relative h-56 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+      {/* Karta dold tills vidare */}
+      {/* <div className="relative h-56 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
         <Image
           objectFit="cover"
           layout="fill"
@@ -16,9 +17,9 @@ export const Contact: React.FC = () => {
           alt=""
           className="lg:object-none xl:object-cover object-none scale-150 sm:transform-none"
         />
-      </div>
+      </div> */}
       <div className="relative mx-auto max-w-md px-4 py-6 sm:max-w-7xl sm:px-6 sm:py-10 md:py-12 lg:px-8 lg:py-16">
-        <div className="md:ml-auto md:w-1/2 md:pl-10">
+        <div className="md:ml-auto md:w-full md:pl-0">
           <h2 className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl font-aurora">
             Välkommen in till oss
           </h2>
@@ -31,9 +32,9 @@ export const Contact: React.FC = () => {
                 <p>
                   Salong Linné
                   <br />
-                  Storgatan 27
+                  Hovsgatan 12
                   <br />
-                  352 30
+                  352 33 Växjö
                 </p>
               </div>
             </div>

@@ -42,10 +42,12 @@ const Home: NextPage<Props> = ({ reviews }) => {
       />
 
       <Hero />
-      <Blurb />
-
-      <Testimonials reviews={reviews} />
-      <SaloonLogo />
+      
+      {/* Döljer tills vidare: Blurb, Testimonials, SaloonLogo */}
+      {/* <Blurb /> */}
+      {/* <Testimonials reviews={reviews} /> */}
+      {/* <SaloonLogo /> */}
+      
       <Contact />
     </>
   );

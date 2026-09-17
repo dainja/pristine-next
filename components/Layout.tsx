@@ -12,8 +12,9 @@ import ActiveLink from "./ActiveLink";
 const navigation = [
   { name: "Hem", href: "/" },
   { name: "Om Linné", href: "/om-linne" },
-  { name: "Kontakt", href: "/kontakt" },
-  { name: "Prislista", href: "/prislista" },
+  // Dolda tills vidare
+  // { name: "Kontakt", href: "/kontakt" },
+  // { name: "Prislista", href: "/prislista" },
 ];
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({
@@ -39,7 +40,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
                       onClick={() => trackBookingButton("header")}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium text-white bg-tarawera hover:bg-gray-700 mr-4 rounded"
+                      className="inline-flex items-center px-4 py-2 border border-transparent text-base font-bold text-white bg-tarawera hover:bg-gray-700 mr-4 rounded shadow-md"
                     >
                       BOKA TID
                     </a>
@@ -49,18 +50,13 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
                     </Popover.Button>
                   </div>
                 </div>
-                <div className="hidden space-x-8 md:flex md:mx-10 items-center">
+                <div className="hidden space-x-4 md:flex md:mx-10 items-center">
                   {navigation.map((item) => (
-                    <ActiveLink
-                      key={item.name}
-                      href={item.href}
-                      // The default class name for non-active links, including the hover state
-                      className="text-base font-medium text-gray-700 hover:text-gray-500 whitespace-nowrap inline-flex items-center px-4 py-2 border border-transparent rounded"
-                      // The class name to add when the link is active
-                      activeClassName="bg-tarawera text-white"
-                    >
-                      {item.name}
-                    </ActiveLink>
+                    <Link key={item.name} href={item.href}>
+                      <a className="text-base font-medium text-gray-700 hover:text-white hover:bg-tarawera whitespace-nowrap inline-flex items-center px-4 py-2 border border-gray-200 rounded-md transition-all duration-200 hover:border-tarawera">
+                        {item.name}
+                      </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -70,7 +66,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
                   onClick={() => trackBookingButton("header")}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium text-white bg-tarawera hover:bg-gray-700 rounded"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-base font-bold text-white bg-tarawera hover:bg-gray-700 rounded shadow-md"
                 >
                   BOKA TID
                 </a>
@@ -106,21 +102,21 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
                   </div>
                 </div>
                 <div className="pt-5 pb-6">
-                  <div className="px-2 space-y-1">
+                  <div className="px-5 space-y-2">
                     {navigation.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-50 block w-full text-base font-medium text-left"
-                        onClick={() => {
-                          // Close the popover when a navigation item is clicked
-                          const popoverButton = document.querySelector(
-                            "[data-headlessui-state]"
-                          ) as HTMLButtonElement;
-                          if (popoverButton) popoverButton.click();
-                        }}
-                      >
-                        {item.name}
+                      <Link key={item.name} href={item.href}>
+                        <a
+                          className="block px-4 py-3 rounded-md text-gray-900 hover:bg-gray-100 text-base font-medium text-center border border-gray-200"
+                          onClick={() => {
+                            // Close the popover when a navigation item is clicked
+                            const popoverButton = document.querySelector(
+                              "[data-headlessui-state]"
+                            ) as HTMLButtonElement;
+                            if (popoverButton) popoverButton.click();
+                          }}
+                        >
+                          {item.name}
+                        </a>
                       </Link>
                     ))}
                   </div>
@@ -130,7 +126,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
                       onClick={() => trackBookingButton("header")}
                       target="_blank"
                       rel="noreferrer"
-                      className="block text-center w-full py-3 px-4 shadow bg-tarawera hover:bg-gray-700 text-white font-medium"
+                      className="block text-center w-full py-4 px-4 rounded-md shadow-lg bg-tarawera hover:bg-tarawera-700 text-white font-bold uppercase tracking-wider transition-colors duration-200"
                     >
                       BOKA TID
                     </a>
