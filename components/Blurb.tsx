@@ -7,13 +7,8 @@ export const Blurb: React.FC = () => {
       <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
         <div>
           <h1 className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl font-aurora pl-2">
-            Salong Pristine
+            Salong Linné
           </h1>
-          <div className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-            <p className="italic">adjective</p>
-            <p>[ pris·tine || &apos;prɪstɪːn ]</p>
-            <p>gammaldags; ofördärvad; ren; oförändrad</p>
-          </div>
           <br />
           <div className="relative flex py-5 items-center">
             <div className="flex-grow border-t border-gray-400"></div>
@@ -37,11 +32,9 @@ export const Blurb: React.FC = () => {
           </div>
           <div className="mt-2 max-w-prose mx-auto text-xl text-gray-500">
             <p>
-              Vi anser att ett besök hos oss ska vara härligt, inspirerande och
-              anpassat för just dig. Vi erbjuder hårfrisering, barber tjänster,
-              bryn, fransar och skönhet som gör dig till din bästa version.
-              Genom att alltid utbilda, uppdatera oss och brinna för det vi gör
-              kan vi ge dig det där lilla extra.
+              Välkommen till Salong Linné - din professionella barberare i Växjö. 
+              Vi erbjuder hårklippning och skäggtrimning med fokus på kvalitet och precision. 
+              Fade, skinfade och traditionell rakkniv. Boka din tid idag!
             </p>
           </div>
         </div>

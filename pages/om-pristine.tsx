@@ -2,8 +2,9 @@ import { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import Image from "next/image";
 import adnan from "../public/images/about/adnan-bw.jpg";
-import ardita from "../public/images/about/ardita-bw.jpg";
-import donna from "../public/images/about/donna-bw.jpg";
+// Sparade för framtida användning - tidigare team
+// import ardita from "../public/images/about/ardita-bw.jpg";
+// import donna from "../public/images/about/donna-bw.jpg";
 interface Staff {
   id: number;
   name: string;
@@ -17,18 +18,6 @@ interface Staff {
 const staff: Staff[] = [
   {
     id: 1,
-    name: "Donna",
-    role: "FRISÖR",
-    image: donna,
-    about:
-      "Arbetat som frisör i 7 år. Frisöryrket har varit min dröm så länge jag kan minnas. Jag har gått en hel del utbildningar under alla år såsom färgutbildningar, klipp-tekniker och även Hairtalk stylist.",
-    about2:
-      "Älskar att jobba med allt inom hår särskilt ljusa hår och skapa färgförändringar.",
-    about3: "Olaplex.",
-  },
-
-  {
-    id: 2,
     name: "Adnan",
     role: "BARBERARE",
     image: adnan,
@@ -39,31 +28,20 @@ const staff: Staff[] = [
     about3:
       "Uppercut är en fantastisk produkt och den jag har alltid jobbat med.",
   },
-  {
-    id: 3,
-    name: "Ardita",
-    role: "BEAUTY",
-    image: ardita,
-    about:
-      "Arbetat som Makeupartist i snart 13 år. Makeup & skönhetsyrket har alltid varit en dröm sedan barndomen eftersom jag brinner för de konstnärliga. Jag har utbildningar inom både makeup och för olika sminkmärken, samt inom skönhet/teater och film. Jag har även utbildning inom olika ögonbrynstekniker såsom tatuering, form och färg samt lashlift.",
-    about2:
-      "Jag kan inte bestämma mig för något särskilt, älskar att skapa allt som ligger inom min profession! ",
-    about3: null,
-  },
 ];
 const AboutPage: NextPage = () => {
   return (
     <>
-      <NextSeo title="Om Pristine" />
+      <NextSeo title="Om Salong Linné" />
       <div className="relative bg-custom1 py-16 sm:py-20 lg:py-20">
         <div className="relative">
           <div className="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
             <h2 className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl  font-aurora">
-              Om oss på Pristine
+              Om Salong Linné
             </h2>
             <p className="mt-5 mx-auto max-w-prose text-xl text-gray-500"></p>
           </div>
-          <div className="mt-12 mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl">
+          <div className="mt-12 mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-1 lg:max-w-2xl">
             {staff.map((member) => (
               <div
                 key={member.id}

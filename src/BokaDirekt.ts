@@ -42,10 +42,6 @@ export class BokaDirekt {
       id: 46831,
       url: "pristine-46831",
     },
-    {
-      id: 46262,
-      url: "beautybyardita-46262",
-    },
   ];
 
   private static async getGroups(place: Place): Promise<PricelistGroup[]> {

@@ -38,7 +38,7 @@ const Home: NextPage<Props> = ({ reviews }) => {
         twitter={{
           cardType: "summary_large_image",
         }}
-        description="Vi anser att ett besök hos oss ska vara härligt, inspirerande och anpassat för just dig. Vi erbjuder hårfrisering, barber tjänster, bryn, fransar och skönhet som gör dig till din bästa version. Genom att alltid utbilda, uppdatera oss och brinna för det vi gör kan vi ge dig det där lilla extra."
+        description="Välkommen till Salong Linné i Växjö. Vi erbjuder professionella barber-tjänster med fokus på hår och skägg. Fade, skinfade och traditionell rakkniv. Boka din tid idag!"
       />
 
       <Hero />

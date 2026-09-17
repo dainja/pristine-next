@@ -3,12 +3,13 @@ import Image from "next/image";
 import React from "react";
 import adnan from "../public/images/testimonials/adnan-testimonial.jpg";
 import adnan1 from "../public/images/testimonials/adnan-testimonial1.jpg";
-import ardita from "../public/images/testimonials/ardita-testimonial.jpg";
-import ardita1 from "../public/images/testimonials/ardita-testimonial1.jpg";
-import donna from "../public/images/testimonials/donna-testimonial.jpg";
-import donna1 from "../public/images/testimonials/donna-testimonial1.jpg";
-import donna2 from "../public/images/testimonials/donna-testimonial2.jpg";
-import donna3 from "../public/images/testimonials/donna-testimonial3.jpg";
+// Sparade för framtida användning - tidigare team
+// import ardita from "../public/images/testimonials/ardita-testimonial.jpg";
+// import ardita1 from "../public/images/testimonials/ardita-testimonial1.jpg";
+// import donna from "../public/images/testimonials/donna-testimonial.jpg";
+// import donna1 from "../public/images/testimonials/donna-testimonial1.jpg";
+// import donna2 from "../public/images/testimonials/donna-testimonial2.jpg";
+// import donna3 from "../public/images/testimonials/donna-testimonial3.jpg";
 import { Review } from "../src/BokaDirekt";
 import { trackBookingButton } from "../src/gtag";
 
@@ -62,8 +63,6 @@ export const Testimonial: React.FC<{ review: Review }> = ({ review }) => {
   console.log(review);
 
   const adnanImages = [adnan, adnan1];
-  const arditaImages = [ardita, ardita1];
-  const donnaImages = [donna, donna1, donna2, donna3];
 
   function getImage(employee: any) {
     if (employee === "Adnan") {
@@ -71,17 +70,8 @@ export const Testimonial: React.FC<{ review: Review }> = ({ review }) => {
         adnanImages[Math.floor(Math.random() * adnanImages.length)];
       return random;
     }
-    if (employee === "Donna") {
-      const random =
-        donnaImages[Math.floor(Math.random() * donnaImages.length)];
-      return random;
-    }
-    if (employee === "Ardita Delija") {
-      const random =
-        arditaImages[Math.floor(Math.random() * arditaImages.length)];
-      return random;
-    }
-    return "";
+    // Default to Adnan's image for any employee
+    return adnanImages[0];
   }
 
   return (

@@ -28,12 +28,12 @@ function PristineApp({ Component, pageProps }: AppProps) {
     <PlausibleProvider domain="pristinevxo.se">
       <Layout>
         <DefaultSeo
-          titleTemplate="%s | Pristine - Hår & skönhetssalong i Växjö"
-          defaultTitle="Pristine - Hår & skönhetssalong i Växjö"
+          titleTemplate="%s | Salong Linné - Barber i Växjö"
+          defaultTitle="Salong Linné - Barber i Växjö"
           openGraph={{
             type: "website",
             locale: "sv_SE",
-            site_name: "Pristine",
+            site_name: "Salong Linné",
           }}
         />
         <Script

@@ -9,7 +9,7 @@ import blurb from "../public/images/blurb.jpg";
 const ContactPage: NextPage = () => {
   return (
     <>
-      <NextSeo title="Om Pristine" />
+      <NextSeo title="Kontakt" />
       <div className="relative bg-custom1 pt-16 sm:pt-20 pb-8">
         <div className="relative">
           <div className="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
@@ -39,7 +39,7 @@ const ContactPage: NextPage = () => {
         <div className="relative mx-auto max-w-md px-4 py-6 sm:max-w-7xl sm:px-6 sm:py-10 md:py-12 lg:px-8 lg:py-16">
           <div className="md:ml-auto md:w-1/2 md:pl-10">
             <h2 className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl font-aurora">
-              Välkommen in till oss
+              Välkommen till Salong Linné
             </h2>
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-10">
               <div>
@@ -48,11 +48,11 @@ const ContactPage: NextPage = () => {
                 </h3>
                 <div className="text-white">
                   <p>
-                    Pristine
+                    Salong Linné
                     <br />
-                    Storgatan 27
+                    Hovsgatan 12
                     <br />
-                    352 30
+                    352 33 Växjö
                   </p>
                 </div>
               </div>

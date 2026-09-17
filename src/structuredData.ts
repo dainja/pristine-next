@@ -3,7 +3,7 @@
 export const structuredData = {
   "@context": "https://schema.org",
   "@type": "HairSalon",
-  name: "Pristine",
+  name: "Salong Linné",
   image: [
     "https://pristinevxo.se/images/google-structured-data/1x1.jpg",
     "https://pristinevxo.se/images/google-structured-data/4x3.jpg",
@@ -11,15 +11,15 @@ export const structuredData = {
   ],
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Storgatan 27",
+    streetAddress: "Hovsgatan 12",
     addressLocality: "Växjö",
-    postalCode: "35230",
+    postalCode: "35233",
     addressCountry: "Sweden",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 56.878955,
-    longitude: 14.801878,
+    latitude: 56.876,
+    longitude: 14.809,
   },
   url: "http://www.pristinevxo.se",
   telephone: "+4647016120",
